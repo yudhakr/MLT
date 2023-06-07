@@ -3,9 +3,7 @@
 
 ## Domain Proyek
 Domain proyek yang dipilih dalam proyek machine learning ini adalah mengenai kesehatan dengan judul proyek "Analisis Prediktif Data Air Bersih Di Masyarakat".
-<p align=“center”>
-<img width=“240” height=“150” src="https://prodiaohi.sgp1.digitaloceanspaces.com/app/assets/2022/04/20162519/Mengkaji-Kualitas-air-di-Indonesia-scaled.jpg">
-</p>
+[![Analisis-Prediktif-Data-Air-Bersih-Di-Masyarakat.jpg](https://i.postimg.cc/pTbscM81/Analisis-Prediktif-Data-Air-Bersih-Di-Masyarakat.jpg)](https://postimg.cc/DW6QmDxq)
 
 **Latar Belakang**
 
