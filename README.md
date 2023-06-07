@@ -22,10 +22,11 @@ Format Referensi: [Judul Referensi](https://www.nature.com/articles/s41598-022-1
 ## Business Understanding
 ---
 #### Problem Statements
-berdasarkan latar belakang diatas, berikut ini rumusan masalah yang dapat diselesaikan pada proyek ini:
-* Bagaimana cara melakukan pra-pemrosesan pada data penyakit stroke yang akan digunakan untuk membuat model yang baik?
-* Bagaimana cara membuat model untuk memprediksi penyakit stroke pada manusia dengan menggunakan _machine learning_?
-* Berapa nilai akurasi terbaik yang didapatkan dengan menggunakan _machine learning_?
+Berdasarkan latar belakang diatas, berikut ini rumusan masalah yang dapat diselesaikan pada proyek ini diantaranya:
+* Bagaimana cara membuat menprediksi potabilitas air berdasarkan atribut-atribut yang ada ?
+* Bagaimana cara membuat model untuk memprediksi kualitas air bersih dimasyarakat
+* Berapa mengetahui air tersebut layak atau tidak dikomsumsi ?
+
 
 #### Goals
 * Melakukan pra-pemrosesan dengan baik agar dapat digunakan dalam pembuatan model.
