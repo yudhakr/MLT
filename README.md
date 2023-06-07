@@ -33,4 +33,10 @@ Berdasarkan latar belakang diatas, berikut ini rumusan masalah yang dapat disele
 
 #### Solution Statements
 Solusi yang dapat dilakukan untu memenuhi tujuan diantaranya :
+- Untuk  melakukan pemerosesan data dilakukan beberapa teknik yaitu :
+  - Mengisi data yang kosong dengan nilai rata - rata **_(mean substition)_**.
+  - Mengatasi data yang tidak seimbang dengan **_(resample)_**.
+  - Melakukan **_pembagian dataset_** menjadi dua bagian dengan rasio 80% untuk data latih dan 20% untuk data uji.
+  - Melakukan penghapusan data pencilan pada data latih dengan metode LOF **_(Local Outlier Factor)_**.
+  - Melakukan standardisasi data pada semua fitur data **_(Standar Scaler)_**.
 
