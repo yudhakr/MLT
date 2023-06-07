@@ -29,6 +29,10 @@ Berdasarkan latar belakang diatas, berikut ini rumusan masalah yang dapat disele
 
 
 #### Goals
-* Melakukan pra-pemrosesan dengan baik agar dapat digunakan dalam pembuatan model.
-* Mengetahui cara membuat model machine learning untuk memprediksi penyakit stroke pada manusia.
-* Membuat model _machine learning_ dengan nilai akurasi yang mencapai 90%.
+* Untuk mengetahui kualitas air dan potabilitasnya dengan  pembuatan modelnya
+* Mengetahui cara pembuatan model machine learning untuk Analisis Prediktif Data Air Bersih Di Masyarakat.
+* Membuat model _machine learning_ untuk mengklasifikasi data air yang layak dikonsumsi dengan nilai akurasi mencapai 90%
+
+#### Solution Statements
+Solusi yang dapat dilakukan untu memenuhi tujuan diantaranya :
+
