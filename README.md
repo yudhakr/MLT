@@ -61,7 +61,7 @@ Untuk informasi mengenai dataset  yang digunakan dalam proyak menggunakan data u
 | Jenis dan Ukuran Berkas| CSV (257 kB)                                                                    |
 
 
-Pada dataset yang digunakan " Analisis Prediktif Data Air Bersih Di Masyarakat" berisi 3277 baris dan 12 kolom.tipe data yang digunakan adalah float64 dan 1 buah data bertipe int64. Untuk penjelasan menganai variabel - variabel yang ada dalam dataset _ water quality_ sebagai berikut :
+Pada dataset yang digunakan " Analisis Prediktif Data Air Bersih Di Masyarakat" berisi 3277 baris dan 12 kolom.tipe data yang digunakan adalah float64 dan 1 buah data bertipe int64. Untuk penjelasan menganai variabel - variabel yang ada dalam dataset **_water quality_** sebagai berikut :
 
 
 
