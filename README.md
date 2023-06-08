@@ -78,8 +78,10 @@ Pada dataset yang digunakan " Analisis Prediktif Data Air Bersih Di Masyarakat" 
 
 Selain itu disini melkukan visualisasi data yang kosng
 [![visualisasi-data.png](https://i.postimg.cc/0jYX95F5/visualisasi-data.png)](https://postimg.cc/xNd3RQ9B)
+[![visualisasi-data-2.png](https://i.postimg.cc/zXJY34j2/visualisasi-data-2.png)](https://postimg.cc/Z0DMM7X6)
 
 ## Data Preparation
+Pada proyek ini teknik data preparation yang dilakukan diantaranya :
 
 
 
