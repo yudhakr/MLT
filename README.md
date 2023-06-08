@@ -40,3 +40,23 @@ Solusi yang dapat dilakukan untu memenuhi tujuan diantaranya :
   - Melakukan penghapusan data pencilan pada data latih dengan metode LOF **_(Local Outlier Factor)_**.
   - Melakukan standardisasi data pada semua fitur data **_(Standar Scaler)_**.
 
+* Untuk pembuatan model menggunakan model K-Nearest Neighbor.Algoritma tersebut dipilih karena mudah digunakan dan juga cocok untuk kasus ini. Berikut cara kerja, kelebihan dan kekurangan algoritma Random Forest dan K-Nearest Neighbor:
+    * Cara kerja Algoritma K-Nearest Neighbor [[1]](https://publikasi.dinus.ac.id/index.php/jais/article/view/1189/):
+        * Menentukan jumlah tetangga terdekat K
+        * Menghitung jarak dokumen _testing_ ke dokumen _training_
+        * Urutkan data berdasarkan data yang mempunyai jarak Euclidean terkecil
+        * Tentukan kelompok testing berdasarkan label pada K.
+    * Kelebihan dan kekurangan Algoritma K-Nearest Neighbor [[2]](https://simdos.unud.ac.id/uploads/file_penelitian_1_dir/721bdb509a6f0bb9ccca6d7374b86759.pdf):
+        * KNN memiliki beberapa kelebihan yaitu bahwa algoritmanya tangguh terhadap _training_ data yang _noisy_ dan efektif apabila data latihnya besar.
+        * Kekurangan pada algoritma KKN yaitu perlu menentukan nilai dari parameter K (jumlah dari tetangga terdekat), Pembelajaran berdasarkan jarak tidak jelas mengenai jenis jarak apa yang harus digunakan dan atribut mana yang harus digunakan untuk mendapatkan hasil yang terbaik dan Biaya komputasi cukup tinggi karena diperlukan perhitungan dari jarak tiap sample uji pada keseluruhan sample latih.
+
+## Data Understanding
+[![dataset.png](https://i.postimg.cc/2689THMZ/dataset.png)](https://postimg.cc/gwQK2KYz)
+
+Untuk informasi mengenai dataset  yang digunakan dalam proyak menggunakan data s
+
+
+
+
+
+
