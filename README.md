@@ -76,6 +76,9 @@ Pada dataset yang digunakan " Analisis Prediktif Data Air Bersih Di Masyarakat" 
 9. **Turbidity**: adalah Kekeruhan yang berasal sifat air dalam memancarkan cahaya, dan uji ini digunakan untuk menunjukkan kualitas pembuangan limbah terkait dengan zat koloid. Nilai kekeruhan rata-rata yang diperoleh untuk Kampus Wondo Genet (0,98 NTU) lebih rendah dari nilai yang direkomendasikan oleh WHO yaitu 5,00 NTU.
 10. **Potability**: adalah air aman untuk dikonsumsi oleh manusia, di mana 1 berarti dapat diminum dan 0 berarti tidak dapat diminum.
 
+Selain itu disini melkukan visualisasi data yang kosng
+[![visualisasi-data.png](https://i.postimg.cc/0jYX95F5/visualisasi-data.png)](https://postimg.cc/xNd3RQ9B)
+
 ## Data Preparation
 
 
