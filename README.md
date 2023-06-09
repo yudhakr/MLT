@@ -109,9 +109,22 @@ Pada proyek ini teknik data preparation yang dilakukan diantaranya :
 
 * Melakukan pembagian dataset pada dataset train_test_split menjadi 80% dan 20% untuk data uji setelah melakukan pra-pemrosesan ke dataset, sehingga perbandingan ratio menjadi 80:20.Untuk Data latih sendiri hanya melatih model,Pembagian ini menggunakan modul train_test_split dan scikit-learn.[![pembagian-dataset.png](https://i.postimg.cc/2jHRmSKN/pembagian-dataset.png)](https://postimg.cc/PN8FQTHS)
 
-* Melakukan pencicilan pada data latih dengan metode LOF(Local Outlier Factor)
-  
+* Melakukan pencicilan pada data latih dengan [metode LOF(Local Outlier Factor)](http://etd.repository.ugm.ac.id/penelitian/detail/183405).Data pencilan merupakan nilai yang yang tidak normal dalam dataset yang mengakibatkan distorsi pada analisis statistika dan berujung pada pembuatan model yang kurang optimal.Metode ini cocok digunakan untuk data bertipe runtutan waktu. Data yang telah bersih dan telah dihaluskan dapat digunakan untuk melakukan prediksi. Penelitian ini menggunakan metode Artificial Neural Network (ANN), Gated Recurrent Unit (GRU) dan Long-Short Term Memories (LSTM) untuk melakukan prediksi.[![LOF.png](https://i.postimg.cc/66cFdSMB/LOF.png)](https://postimg.cc/7bCB4BvR)
 
+* Melakukan **standardisasi data** pada semua fitur data.Tahap terakhir dengan melakukan standardisasi data.Hal ini akan membuat semua fitur numerik dataset memiliki skala yang sama dengan menggunakan MinMaxScaler.[![standarisasi-data.png](https://i.postimg.cc/90Cw0KSf/standarisasi-data.png)](https://postimg.cc/sQHg063F)
+
+## Modeling
+
+Setelah  melakukan pra-pemrosesan pada dataset. Untuk selanjutnya adalah modeling terhadap data. Pada tahap ini menggunakan 2 algoritma K-Nearest dengan  menggunakan data model terlatih sehingga data diukur bilai akurasinya.
+
+* Model baseline adalah model awal yang digunakan sebagai pembanding atau titik awal dalam membangun model yang lebih kompleks atau dioptimalkan.melatih model baseline menggunakan data latih (X_train dan y_train). Metode fit() digunakan untuk mengajarkan model untuk mempelajari pola atau hubungan antara fitur-fitur dalam data latih dan label yang sesuai.[![model-1.png](https://i.postimg.cc/V6FS21sF/model-1.png)](https://postimg.cc/MMvKjCQc) Untuk menyimpan prediksi confussion matrix [![model-2.png](https://i.postimg.cc/ZKLGPLSz/model-2.png)](https://postimg.cc/qzzD4yq1)
+Pada Model berbandingan dengan algoritma K-Nearest Neighbor,dimana membuktikan apakah kedua model dapat diuji dan divisualisasikan pada confussion matrix.
+* Hasil Model baseline
+[![model-5.png](https://i.postimg.cc/5ttfT2Jy/model-5.png)](https://postimg.cc/jDGVJKLY)
+* Hasil Model yang dikembangkan (model yang dapat digunakan
+[![model-6.png](https://i.postimg.cc/BvRRpSQd/model-6.png)](https://postimg.cc/5HqPNMz3)
+
+## Evalution
 
 
 
