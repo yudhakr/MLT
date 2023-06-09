@@ -117,7 +117,8 @@ Pada proyek ini teknik data preparation yang dilakukan diantaranya :
 
 Setelah  melakukan pra-pemrosesan pada dataset. Untuk selanjutnya adalah modeling terhadap data. Pada tahap ini menggunakan 2 algoritma K-Nearest dengan  menggunakan data model terlatih sehingga data diukur bilai akurasinya.
 
-* Model baseline adalah model awal yang digunakan sebagai pembanding atau titik awal dalam membangun model yang lebih kompleks atau dioptimalkan.melatih model baseline menggunakan data latih (X_train dan y_train). Metode fit() digunakan untuk mengajarkan model untuk mempelajari pola atau hubungan antara fitur-fitur dalam data latih dan label yang sesuai.[![model-1.png](https://i.postimg.cc/V6FS21sF/model-1.png)](https://postimg.cc/MMvKjCQc) Untuk menyimpan prediksi confussion matrix [![model-2.png](https://i.postimg.cc/ZKLGPLSz/model-2.png)](https://postimg.cc/qzzD4yq1)
+* Model baseline adalah model awal yang digunakan sebagai pembanding atau titik awal dalam membangun model yang lebih kompleks atau dioptimalkan.melatih model baseline menggunakan data latih (X_train dan y_train). Metode fit() digunakan untuk mengajarkan model untuk mempelajari pola atau hubungan antara fitur-fitur dalam data latih dan label yang sesuai.[[3]](https://stephenallwright.com/baseline-machine-learning-models/)
+[![model-1.png](https://i.postimg.cc/V6FS21sF/model-1.png)](https://postimg.cc/MMvKjCQc) Untuk menyimpan prediksi confussion matrix [![model-2.png](https://i.postimg.cc/ZKLGPLSz/model-2.png)](https://postimg.cc/qzzD4yq1)
 Pada Model berbandingan dengan algoritma K-Nearest Neighbor,dimana membuktikan apakah kedua model dapat diuji dan divisualisasikan pada confussion matrix.
 * Hasil Model baseline
 [![model-5.png](https://i.postimg.cc/5ttfT2Jy/model-5.png)](https://postimg.cc/jDGVJKLY)
@@ -140,6 +141,10 @@ Rumus diatas merupakan metrik akurasi yang menghitung ketepatan model dalam hal 
 
 ## Referensi
 
+- [[1]](https://publikasi.dinus.ac.id/index.php/jais/article/view/1189/)Penerapan Algoritma K-Nearest Neighbor pada Information Retrieval dalam Penentuan Topik Referensi Tugas Akhir
+- [[2]](https://simdos.unud.ac.id/uploads/file_penelitian_1_dir/721bdb509a6f0bb9ccca6d7374b86759.pdf)INOVASI TEKNOLOGI INFORMASI DAN KOMUNIKASI DALAM MENUNJANG TECHNOPRENEURSHIP
+- [[3]](https://stephenallwright.com/baseline-machine-learning-models/ )baseline model in machine learning.
+- [[4]](http://etd.repository.ugm.ac.id/penelitian/detail/183405)(Pendeteksian Anomali Menggunakan Local Outlier Factor Pada Data Untuk Meningkatkan Performa Prediksi Jumlah Obat.
 
 
 
