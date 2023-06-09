@@ -97,6 +97,13 @@ Ini berdasarkan data pada kolom yang memiliki data kosong (data keseluruhan)
 [![prepation-3.png](https://i.postimg.cc/GhkGkFQR/prepation-3.png)](https://postimg.cc/F7HYvJ8C)
 
 
+Ini melakukan pengganti data kosong dengan nilai rata-rata kolom dengan memasukan kedalam variable df. Dalam hal ini, kita menggunakan nilai rata-rata dari masing-masing kolom sebagai nilai pengganti untuk nilai-nilai yang hilang. Argumen inplace=True digunakan untuk melakukan perubahan langsung pada dataframe df tanpa perlu menyimpan hasilnya dalam variabel baru,juga mengecek kembali nilai yang kosong pada dataset.
+[![prepation-4.png](https://i.postimg.cc/Dw4NnYdh/prepation-4.png)](https://postimg.cc/0zxnCnBX)
+[![prepation-4.png](https://i.postimg.cc/Dw4NnYdh/prepation-4.png)](https://postimg.cc/0zxnCnBX)
+
+
+
+
 
 
 
