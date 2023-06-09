@@ -125,6 +125,13 @@ Pada Model berbandingan dengan algoritma K-Nearest Neighbor,dimana membuktikan a
 [![model-6.png](https://i.postimg.cc/BvRRpSQd/model-6.png)](https://postimg.cc/5HqPNMz3)
 
 ## Evalution
+Pada proyek ini, model yang dikembangkan adalah Dalam proyek ini, sistem yang dikembangkan adalah suatu jenis klasifikasi dan mengukur performanya menggunakan metrik akurasi, f1-skor, recall, dan presisi. Berikut adalah hasil pengukuran dari model yang dipilih, yakni model yang menggunakan algoritma Pohon Acak (Random Forest), dengan metrik akurasi, f1-skor, recall, dan precision.
+* Laporan hasil klasifikasi model_baseline
+[![Evaluation-1.png](https://i.postimg.cc/52GpLzHc/Evaluation-1.png)](https://postimg.cc/18GpZfcM)
+
+* Rumus Akurasi
+
+
 
 
 
