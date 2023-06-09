@@ -108,6 +108,8 @@ Pada proyek ini teknik data preparation yang dilakukan diantaranya :
 [![resample.png](https://i.postimg.cc/Wzm68CZG/resample.png)](https://postimg.cc/D4ZXyCB0)
 
 * Melakukan pembagian dataset pada dataset train_test_split menjadi 80% dan 20% untuk data uji setelah melakukan pra-pemrosesan ke dataset, sehingga perbandingan ratio menjadi 80:20.Untuk Data latih sendiri hanya melatih model,Pembagian ini menggunakan modul train_test_split dan scikit-learn.[![pembagian-dataset.png](https://i.postimg.cc/2jHRmSKN/pembagian-dataset.png)](https://postimg.cc/PN8FQTHS)
+
+* Melakukan pencicilan pada data latih dengan metode LOF(Local Outlier Factor)
   
 
 
