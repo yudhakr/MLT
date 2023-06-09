@@ -86,20 +86,38 @@ Selain itu disini melkukan visualisasi data yang kosng
 ## Data Preparation
 Pada proyek ini teknik data preparation yang dilakukan diantaranya :
 
-Untuk mengatasi data kosong dengan nilai rata-rata kolom (mean substition),maka rata-rata yang memiliki data kosong dengan membuat kolom Potability = 0
+* Untuk mengatasi data kosong dengan nilai rata-rata kolom (mean substition),maka rata-rata yang memiliki data kosong dengan membuat kolom Potability = 0
 [![prepation-1.png](https://i.postimg.cc/8CdRNh7w/prepation-1.png)](https://postimg.cc/CZ1B4nHf)
 
-Ini berdasarkan rata-rata data kosong, dengan kolom Portability = 1
-
+* Ini berdasarkan rata-rata data kosong, dengan kolom Portability = 1
 [![prepation-1.png](https://i.postimg.cc/8CdRNh7w/prepation-1.png)](https://postimg.cc/CZ1B4nHf)
 
-Ini berdasarkan data pada kolom yang memiliki data kosong (data keseluruhan)
+* Ini berdasarkan data pada kolom yang memiliki data kosong (data keseluruhan)
 [![prepation-3.png](https://i.postimg.cc/GhkGkFQR/prepation-3.png)](https://postimg.cc/F7HYvJ8C)
 
 
-Ini melakukan pengganti data kosong dengan nilai rata-rata kolom dengan memasukan kedalam variable df. Dalam hal ini, kita menggunakan nilai rata-rata dari masing-masing kolom sebagai nilai pengganti untuk nilai-nilai yang hilang. Argumen inplace=True digunakan untuk melakukan perubahan langsung pada dataframe df tanpa perlu menyimpan hasilnya dalam variabel baru,juga mengecek kembali nilai yang kosong pada dataset.
+* Ini melakukan pengganti data kosong dengan nilai rata-rata kolom dengan memasukan kedalam variable df. Dalam hal ini, kita menggunakan nilai rata-rata dari masing-masing kolom sebagai nilai pengganti untuk nilai-nilai yang hilang. Argumen inplace=True digunakan untuk melakukan perubahan langsung pada dataframe df tanpa perlu menyimpan hasilnya dalam variabel baru,juga mengecek kembali nilai yang kosong pada dataset.
 [![prepation-4.png](https://i.postimg.cc/Dw4NnYdh/prepation-4.png)](https://postimg.cc/0zxnCnBX)
-[![prepation-4.png](https://i.postimg.cc/Dw4NnYdh/prepation-4.png)](https://postimg.cc/0zxnCnBX)
+[![prepation-4-5.png](https://i.postimg.cc/Bvxw1LVw/prepation-4-5.png)](https://postimg.cc/Lq8VcXRz)
+* Disini perbedaan antara nilai rata-rata dan median Air Minum dan Air Non-Minum sangat kecil. Jadi menggunakan median keseluruhan fitur untuk menghubungkan nilai
+
+* Disini melakukan pengecekan total baris dalam kolom dari dataset
+[![prepation-5.png](https://i.postimg.cc/zBcyTj3J/prepation-5.png)](https://postimg.cc/njqVJqv5)
+
+* Ini juga  menghitung masing- masing nilai pada kolom 'Potability' dalam variable 'df' dengan menunjukan apakah suatu sample air layak/tidak.Untuk mengatasi masalah ini, dilakukan resampling pada data dengan label 1 sehingga jumlah data pada label 1 menjadi seimbang dengan jumlah data pada label 0. Setelah resampling, dataset yang sudah seimbang tersebut disimpan kembali dalam dataframe df.
+[![resample.png](https://i.postimg.cc/Wzm68CZG/resample.png)](https://postimg.cc/D4ZXyCB0)
+
+* Melakukan pembagian dataset pada dataset train_test_split menjadi 80% dan 20% untuk data uji setelah melakukan pra-pemrosesan ke dataset, sehingga perbandingan ratio menjadi 80:20.Untuk Data latih sendiri hanya melatih model,Pembagian ini menggunakan modul train_test_split dan scikit-learn.[![pembagian-dataset.png](https://i.postimg.cc/2jHRmSKN/pembagian-dataset.png)](https://postimg.cc/PN8FQTHS)
+  
+
+
+
+
+
+
+
+
+
 
 
 
