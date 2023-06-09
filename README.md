@@ -132,6 +132,18 @@ Pada proyek ini, model yang dikembangkan adalah Dalam proyek ini, sistem yang di
 * Rumus Akurasi
 
 
+Rumus diatas merupakan metrik akurasi yang menghitung ketepatan model dalam hal ini meprediksi data dengan data yang sebenarnya.Untuk kelebihan sendiri dalam pembuatan model klasifikasi baik itu klasifikasi antar dua kelas maupun kategori, selain itu perthitungan ini memiliki kekurangan yang biasanya dapat menyesatkan terutama data yang tidak seimbang.
+
+* _Precision_ merupakan numerik untuk melakukan prediksi benar positifnya hasil suatu prediksi
+ *_Recall_ merupakan metrik untuk memprediksi benar positifnya berdasarkan keseluruhan data
+ * _f1-score f1-score merupakan metrik perbandingan antara precision dan recall yang dibobotkan.
+
+## Referensi
+
+
+
+
+
 
 
 
