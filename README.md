@@ -40,7 +40,10 @@ Solusi yang dapat dilakukan untu memenuhi tujuan diantaranya :
   - Melakukan penghapusan data pencilan pada data latih dengan metode LOF **_(Local Outlier Factor)_**.
   - Melakukan standardisasi data pada semua fitur data **_(Standar Scaler)_**.
 
-* Untuk pembuatan model menggunakan model K-Nearest Neighbor.Algoritma tersebut dipilih karena mudah digunakan dan juga cocok untuk kasus ini. Berikut cara kerja, kelebihan dan kekurangan algoritma Random Forest dan K-Nearest Neighbor:
+* Untuk pembuatan model menggunakan model K-Nearest Neighbor.Algoritma tersebut dipilih karena mudah digunakan dan juga cocok untuk kasus ini. Berikut cara kerja, 
+untuk Hitungan euclidin distance dengan rumus
+[![rumus1.png](https://i.postimg.cc/44S3ZzWc/rumus1.png)](https://postimg.cc/mh74yFfZ)
+kelebihan dan kekurangan algoritma Random Forest dan K-Nearest Neighbor:
     * Cara kerja Algoritma K-Nearest Neighbor [[1]](https://publikasi.dinus.ac.id/index.php/jais/article/view/1189/):
         * Menentukan jumlah tetangga terdekat K
         * Menghitung jarak dokumen _testing_ ke dokumen _training_
@@ -82,6 +85,16 @@ Selain itu disini melkukan visualisasi data yang kosng
 
 ## Data Preparation
 Pada proyek ini teknik data preparation yang dilakukan diantaranya :
+
+Untuk mengatasi data kosong dengan nilai rata-rata kolom (mean substition),maka rata-rata yang memiliki data kosong dengan membuat kolom Potability = 0
+[![prepation-1.png](https://i.postimg.cc/8CdRNh7w/prepation-1.png)](https://postimg.cc/CZ1B4nHf)
+
+Ini berdasarkan rata-rata data kosong, dengan kolom Portability = 1
+
+[![prepation-1.png](https://i.postimg.cc/8CdRNh7w/prepation-1.png)](https://postimg.cc/CZ1B4nHf)
+
+Ini berdasarkan data pada kolom yang memiliki data kosong (data keseluruhan)
+[![prepation-3.png](https://i.postimg.cc/GhkGkFQR/prepation-3.png)](https://postimg.cc/F7HYvJ8C)
 
 
 
