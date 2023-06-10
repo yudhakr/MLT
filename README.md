@@ -81,11 +81,13 @@ Pada dataset yang digunakan " Analisis Prediktif Data Air Bersih Di Masyarakat" 
 10. **Potability**: adalah air aman untuk dikonsumsi oleh manusia, di mana 1 berarti dapat diminum dan 0 berarti tidak dapat diminum.
 
 Selain itu disini melakukan visualisasi data yang kosng
+<img width="850" alt="visualisasi data" src="https://github.com/yudhakr/MLT/assets/84507343/8fbf937d-06ed-497b-b343-8c38dc5bb9e5">
+<img width="734" alt="visualisasi data 2" src="https://github.com/yudhakr/MLT/assets/84507343/52cb286c-9712-4fa1-812d-14d9e6b469a3">
 
 
 ## Data Preparation
 Pada proyek ini teknik data preparation yang dilakukan diantaranya :
-
+<img width="113" alt="data kosong" src="https://github.com/yudhakr/MLT/assets/84507343/6d177780-0d43-4820-8969-1db359fbaa9a">
 * Karena data tidak memiliki column categorical/object jadi skip langkah
 * Karena data yang kosong pada dataset cukup banyak, pemilihan metode untuk menghapus data saja bukanlah hal yang bijak. Hal tersebut akan mengakibatkan model yang nantinya akan dibuat kehilangan banyak informasi. Sehingga dipilihlah cara untuk memanipulasi datanya, dengan mengisi data yang kosong dengan nilai rata-rata kolomnya. Data rata-rata kolom dipilih karena merupakan data yang dipastikan bukan data pencilan. Sehingga dengan menganggap data kosong sebagai data rata-rata, model tetap dapat memperoleh informasi dari data yang ada pada kolom lainnya. Proses yang dilakukan pertama-tama dengan cara mengambil nilai rata-rata dari kolom yang memiliki data kosong, kemudian memasukannya kepada setiap data kosong sebagai pengganti dari datanya. Semua proses tersebut dilakukan dengan slicing data dengan kondisi 
 * Untuk mengatasi data kosong dengan nilai rata-rata kolom (mean substition),maka rata-rata yang memiliki data kosong dengan membuat kolom Potability = 0 dan selanjutnya membuat kolom Potability = 1
