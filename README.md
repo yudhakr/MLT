@@ -42,7 +42,9 @@ Solusi yang dapat dilakukan untu memenuhi tujuan diantaranya :
 
 * Untuk pembuatan model menggunakan model K-Nearest Neighbor.Algoritma tersebut dipilih karena mudah digunakan dan juga cocok untuk kasus ini. Berikut cara kerja, 
 untuk Hitungan euclidin distance dengan rumus
+
 $$d(xi, x1) = √(x₁ − xu)² + (xi2 − X12)² + ... + (Tip − Xlp) $$
+
 kelebihan dan kekurangan algoritma Random Forest dan K-Nearest Neighbor:
     * Cara kerja Algoritma K-Nearest Neighbor [[1]](https://publikasi.dinus.ac.id/index.php/jais/article/view/1189/):
         * Menentukan jumlah tetangga terdekat K
