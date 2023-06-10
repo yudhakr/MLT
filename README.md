@@ -142,7 +142,9 @@ Rumus diatas merupakan metrik akurasi yang menghitung ketepatan model dalam hal 
  *_Recall_ merupakan metrik untuk memprediksi benar positifnya berdasarkan keseluruhan data. Recall merupakan metrik dalam kasus klasifikasi yang digunakan untuk menghitung seberapa baik model memprediksi label positif terhadap semua label data positif, untuk rumus sendiri _Recall_ = (TP)/(TP + FN)
  * _f1-score f1-score merupakan metrik perbandingan antara precision dan recall yang dibobotkan.metrik dalam kasus klasifikasi yang digunakan untuk menghitung seberapa baik hasil prediksi model (precision) dan seberapa lengkap hasil prediksinya (recall).sedangkan Rumus f1-score sebagai berikut:
 $$F1 Score = 2* (Recall*Precission) / (Recall + Precission) $$
+
 *** _Catatan : Nilai beta = 1 (f1-skor)_***
+
 Kelebihan dari metriks ini menutup semua kekurangan yang ada pada precision dan recall. Namun kekurangannya adalah f1-score tidak memperhitungkan hasil prediksi benar pada label negatif.
  
 
