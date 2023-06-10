@@ -131,13 +131,15 @@ Pada proyek ini, model yang dikembangkan adalah Dalam proyek ini, sistem yang di
 [![Evaluation-1.png](https://i.postimg.cc/52GpLzHc/Evaluation-1.png)](https://postimg.cc/18GpZfcM)
 
 * Rumus Akurasi
-
+[![akurasi-1.png](https://i.postimg.cc/BnzbC1Yw/akurasi-1.png)](https://postimg.cc/9DGcmzjG)
 
 Rumus diatas merupakan metrik akurasi yang menghitung ketepatan model dalam hal ini meprediksi data dengan data yang sebenarnya.Untuk kelebihan sendiri dalam pembuatan model klasifikasi baik itu klasifikasi antar dua kelas maupun kategori, selain itu perthitungan ini memiliki kekurangan yang biasanya dapat menyesatkan terutama data yang tidak seimbang.
 
-* _Precision_ merupakan numerik untuk melakukan prediksi benar positifnya hasil suatu prediksi
- *_Recall_ merupakan metrik untuk memprediksi benar positifnya berdasarkan keseluruhan data
- * _f1-score f1-score merupakan metrik perbandingan antara precision dan recall yang dibobotkan.
+* _Precision_ merupakan numerik untuk melakukan prediksi benar positifnya hasil suatu prediksi,untuk rumus sendiri _Precision_ = (TP)/(TP + TP)
+
+ *_Recall_ merupakan metrik untuk memprediksi benar positifnya berdasarkan keseluruhan data,untuk rumus sendiri _Recall_ = (TP)/(TP + FN)
+ * _f1-score f1-score merupakan metrik perbandingan antara precision dan recall yang dibobotkan,sedangkan Rumus f1-score sebagai berikut:
+ [![f1.png](https://i.postimg.cc/VvpxxcJq/f1.png)](https://postimg.cc/GTPgDVJt)
 
 ## Referensi
 
@@ -145,6 +147,7 @@ Rumus diatas merupakan metrik akurasi yang menghitung ketepatan model dalam hal 
 - [[2]](https://simdos.unud.ac.id/uploads/file_penelitian_1_dir/721bdb509a6f0bb9ccca6d7374b86759.pdf)INOVASI TEKNOLOGI INFORMASI DAN KOMUNIKASI DALAM MENUNJANG TECHNOPRENEURSHIP
 - [[3]](https://stephenallwright.com/baseline-machine-learning-models/ )baseline model in machine learning.
 - [[4]](http://etd.repository.ugm.ac.id/penelitian/detail/183405)(Pendeteksian Anomali Menggunakan Local Outlier Factor Pada Data Untuk Meningkatkan Performa Prediksi Jumlah Obat.
+- [[5]](https://www.dicoding.com/academies/319/tutorials/18595) Machine Learning Terapan Dicoding (Juni 2023)
 
 
 
