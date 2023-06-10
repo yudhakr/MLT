@@ -55,8 +55,10 @@ kelebihan dan kekurangan algoritma Random Forest dan K-Nearest Neighbor:
         * Kekurangan pada algoritma KKN yaitu perlu menentukan nilai dari parameter K (jumlah dari tetangga terdekat), Pembelajaran berdasarkan jarak tidak jelas mengenai jenis jarak apa yang harus digunakan dan atribut mana yang harus digunakan untuk mendapatkan hasil yang terbaik dan Biaya komputasi cukup tinggi karena diperlukan perhitungan dari jarak tiap sample uji pada keseluruhan sample latih.
 
 ## Data Understanding
+<img width="875" alt="dataset" src="https://github.com/yudhakr/MLT/assets/84507343/a07fef2d-96a7-4384-944a-c4a4b19281f9">
 
-[![dataset.png](https://i.postimg.cc/FRvZwDbn/dataset.png)](https://postimg.cc/t1rWxdMh)
+
+
 Untuk informasi mengenai dataset  yang digunakan dalam proyak menggunakan data untuk mengembangakn proyek ini berasal dari
 |Sumber               |[Kaggle Dataset : Water Quality](https://www.kaggle.com/datasets/adityakadiwal/water-potability) |
 |-----------------------|----------------------------------------------------------------------------------|
@@ -91,35 +93,32 @@ Pada proyek ini teknik data preparation yang dilakukan diantaranya :
 * Karena data tidak memiliki column categorical/object jadi skip langkah
 * Karena data yang kosong pada dataset cukup banyak, pemilihan metode untuk menghapus data saja bukanlah hal yang bijak. Hal tersebut akan mengakibatkan model yang nantinya akan dibuat kehilangan banyak informasi. Sehingga dipilihlah cara untuk memanipulasi datanya, dengan mengisi data yang kosong dengan nilai rata-rata kolomnya. Data rata-rata kolom dipilih karena merupakan data yang dipastikan bukan data pencilan. Sehingga dengan menganggap data kosong sebagai data rata-rata, model tetap dapat memperoleh informasi dari data yang ada pada kolom lainnya. Proses yang dilakukan pertama-tama dengan cara mengambil nilai rata-rata dari kolom yang memiliki data kosong, kemudian memasukannya kepada setiap data kosong sebagai pengganti dari datanya. Semua proses tersebut dilakukan dengan slicing data dengan kondisi 
 * Untuk mengatasi data kosong dengan nilai rata-rata kolom (mean substition),maka rata-rata yang memiliki data kosong dengan membuat kolom Potability = 0 dan selanjutnya membuat kolom Potability = 1
-
 menggunakan panda
-* Ini melakukan pengganti data kosong dengan nilai rata-rata kolom dengan memasukan kedalam variable df. Dalam hal ini, kita menggunakan nilai rata-rata dari masing-masing kolom sebagai nilai pengganti untuk nilai-nilai yang hilang. Argumen inplace=True digunakan untuk melakukan perubahan langsung pada dataframe df tanpa perlu menyimpan hasilnya dalam variabel baru,juga mengecek kembali nilai yang kosong pada dataset.
+* Mengatasi data yang tidak seimbang jumlahnya dengan label lain menggunakan teknik resample.Dataset yang tidak seimbang pada data kategori akan menyebabkan model yang dibuat menjadi bias terhadap suatu kategori yang memiliki data lebih banyak. Oleh karena itu diperlukan teknik manipulasi data, dan yang digunakan di sini adalah teknik resample. Prosesnya adalah dengan memasukan kolom yang memiliki data paling sedikit pada fungsi resample, kemudian fungsi resample akan menghasilkan data baru dari data yang sudah ada sebelumnya sampai jumlah datanya sama dengan data mayoritas dari label selainnya. Setelah itu selesai, masukan datanya kedalam dataset agar menjadi satu kesatuan data.
+* Agar dapat menguji performa model pada data sebenarnya, maka perlu dilakukan pembagian dataset kedalam dua atau tiga bagian. Pada proyek ini dilakukan dua bagian saja yakni pada data latih dan data uji dengan rasio 80:20. Data latih dilakukan sepenuhnya untuk melatih model, sedangkan data uji merupakan data yang belum pernah dilihat oleh model dan diharapkan model dapat memiliki performa yang sama baiknya pada data uji seperti pada data latih. Pada bagian ini dipastikan juga pembagian label kategorikal haruslah sama banyak pada data latih dan data uji. Pembagian dataset dilakukan dengan modul train_test_split dari scikit-learn
+* Menghapus data pencilan pada data latih dengan metode LOF Local Outlier Factor, pada bagian ini diterapkan metode Local Outlier Factor untuk mendeteksi nilai outlier dan kemudian menghapusnya dari data latih. Mengapa data latih saja? Agar kita dapat melihat bagaimana performa model pada data yang belum pernah dilihat model sebelumnya termasuk juga data pencilan. Mengapa dipilih metode LOF? karena metode ini berhubungan erat prosesnya dengan algoritma nearest neighbor. Mengutip dari dokumentasi LocalOutlierFactor, fungsi tersebut bekerja dengan cara menganalisis nilai lokalitas yang ada pada k-tetangga terdekat, yang jaraknya digunakan untuk memperkirakan kepadatan lokal. Dengan membandingkan kepadatan lokal sampel dengan kepadatan lokal tetangganya, seseorang dapat mengidentifikasi sampel yang memiliki kepadatan jauh lebih rendah daripada tetangganya. Apabila kepadatannya rendah maka ini dianggap outlier.
+* Tahap terakhir dengan melakukan standardisasi data. Hal ini akan membuat semua fitur numerik berada dalam skala data yang sama juga membuat komputasi dari pembuatan model dapat berjalan lebih cepat karena rentang datanya hanya antara 0-1. Untuk melakukan standardisasi data, digunakan fungsi MinMaxScaler yang perhitungannya kurang lebih seperti rumus di bawah ini.
 
-* Disini perbedaan antara nilai rata-rata dan median Air Minum dan Air Non-Minum sangat kecil. Jadi menggunakan median keseluruhan fitur untuk menghubungkan nilai
-
-* Disini melakukan pengecekan total baris dalam kolom dari dataset
-[![prepation-5.png](https://i.postimg.cc/zBcyTj3J/prepation-5.png)](https://postimg.cc/njqVJqv5)
-
-* Ini juga  menghitung masing- masing nilai pada kolom 'Potability' dalam variable 'df' dengan menunjukan apakah suatu sample air layak/tidak.Untuk mengatasi masalah ini, dilakukan resampling pada data dengan label 1 sehingga jumlah data pada label 1 menjadi seimbang dengan jumlah data pada label 0. Setelah resampling, dataset yang sudah seimbang tersebut disimpan kembali dalam dataframe df.
-[![resample.png](https://i.postimg.cc/Wzm68CZG/resample.png)](https://postimg.cc/D4ZXyCB0)
-
-* Melakukan pembagian dataset pada dataset train_test_split menjadi 80% dan 20% untuk data uji setelah melakukan pra-pemrosesan ke dataset, sehingga perbandingan ratio menjadi 80:20.Untuk Data latih sendiri hanya melatih model,Pembagian ini menggunakan modul train_test_split dan scikit-learn.[![pembagian-dataset.png](https://i.postimg.cc/2jHRmSKN/pembagian-dataset.png)](https://postimg.cc/PN8FQTHS)
-
-* Melakukan pencicilan pada data latih dengan [metode LOF(Local Outlier Factor)](http://etd.repository.ugm.ac.id/penelitian/detail/183405).Data pencilan merupakan nilai yang yang tidak normal dalam dataset yang mengakibatkan distorsi pada analisis statistika dan berujung pada pembuatan model yang kurang optimal.Metode ini cocok digunakan untuk data bertipe runtutan waktu. Data yang telah bersih dan telah dihaluskan dapat digunakan untuk melakukan prediksi. Penelitian ini menggunakan metode Artificial Neural Network (ANN), Gated Recurrent Unit (GRU) dan Long-Short Term Memories (LSTM) untuk melakukan prediksi.[![LOF.png](https://i.postimg.cc/66cFdSMB/LOF.png)](https://postimg.cc/7bCB4BvR)
-
-* Melakukan **standardisasi data** pada semua fitur data.Tahap terakhir dengan melakukan standardisasi data.Hal ini akan membuat semua fitur numerik dataset memiliki skala yang sama dengan menggunakan MinMaxScaler.[![standarisasi-data.png](https://i.postimg.cc/90Cw0KSf/standarisasi-data.png)](https://postimg.cc/sQHg063F)
 
 ## Modeling
 
 Setelah  melakukan pra-pemrosesan pada dataset. Untuk selanjutnya adalah modeling terhadap data. Pada tahap ini menggunakan 2 algoritma K-Nearest dengan  menggunakan data model terlatih sehingga data diukur bilai akurasinya.
 
-* Model baseline adalah model awal yang digunakan sebagai pembanding atau titik awal dalam membangun model yang lebih kompleks atau dioptimalkan.melatih model baseline menggunakan data latih (X_train dan y_train). Metode fit() digunakan untuk mengajarkan model untuk mempelajari pola atau hubungan antara fitur-fitur dalam data latih dan label yang sesuai.[[3]](https://stephenallwright.com/baseline-machine-learning-models/)
-[![model-1.png](https://i.postimg.cc/V6FS21sF/model-1.png)](https://postimg.cc/MMvKjCQc) Untuk menyimpan prediksi confussion matrix [![model-2.png](https://i.postimg.cc/ZKLGPLSz/model-2.png)](https://postimg.cc/qzzD4yq1)
+* Model baseline adalah model awal yang digunakan sebagai pembanding atau titik awal dalam membangun model yang lebih kompleks atau dioptimalkan.melatih model baseline menggunakan data latih (X_train dan y_train). Metode fit() digunakan untuk mengajarkan model untuk mempelajari pola atau hubungan antara fitur-fitur dalam data latih dan label yang sesuai.
+
+<img width="430" alt="model 1" src="https://github.com/yudhakr/MLT/assets/84507343/05580f53-6a31-4c80-855d-a8505908a7e1">
+
+ Untuk menyimpan prediksi confussion matrix 
+ 
+ <img width="236" alt="model 2" src="https://github.com/yudhakr/MLT/assets/84507343/ed66b314-6235-4bc4-b500-0d748ae25a93">
+
 Pada Model berbandingan dengan algoritma K-Nearest Neighbor,dimana membuktikan apakah kedua model dapat diuji dan divisualisasikan pada confussion matrix.
 * Hasil Model baseline
-[![model-5.png](https://i.postimg.cc/5ttfT2Jy/model-5.png)](https://postimg.cc/jDGVJKLY)
+<img width="369" alt="model 5" src="https://github.com/yudhakr/MLT/assets/84507343/0597d1d3-3f69-4bba-99cf-55f569ba2aee">
+
 * Hasil Model yang dikembangkan (model yang dapat digunakan
-[![model-6.png](https://i.postimg.cc/BvRRpSQd/model-6.png)](https://postimg.cc/5HqPNMz3)
+<img width="338" alt="model 6" src="https://github.com/yudhakr/MLT/assets/84507343/49088d17-3906-4c69-b613-d45f3b69c0ad">
+
 
 ## Evalution
 Pada proyek ini, model yang dikembangkan adalah Dalam proyek ini, sistem yang dikembangkan adalah suatu jenis klasifikasi dan mengukur performanya menggunakan metrik akurasi, f1-skor, recall, dan presisi. Berikut adalah hasil pengukuran dari model yang dipilih, yakni model yang menggunakan algoritma Pohon Acak (Random Forest), dengan metrik akurasi, f1-skor, recall, dan precision.
@@ -136,11 +135,13 @@ Rumus diatas merupakan metrik akurasi yang menghitung ketepatan model dalam hal 
  *_Recall_ merupakan metrik untuk memprediksi benar positifnya berdasarkan keseluruhan data,untuk rumus sendiri _Recall_ = (TP)/(TP + FN)
  * _f1-score f1-score merupakan metrik perbandingan antara precision dan recall yang dibobotkan,sedangkan Rumus f1-score sebagai berikut:
  [![f1.png](https://i.postimg.cc/VvpxxcJq/f1.png)](https://postimg.cc/GTPgDVJt)
+ 
+ 
 
 ## Referensi
 - [[1]](http://publikasi.dinus.ac.id/index.php/technoc/article/view/5901)Hardiana Said, Nur Hafifah Matondang, Helena Nurramdhani Irmanda,PENERAPAN ALGORITMA K-NEAREST NEIGHBOR UNTUK MEMPREDIKSI KUALITAS AIR YANG DAPAT DIKONSUMSI,publikasi dinus,Vol 21, No. 2,2020.
-- [[2]](https://publikasi.dinus.ac.id/index.php/jais/article/view/1189/)Ramadhan Rakhmat Sani, Junta Zeniarja, Ardytha Luthfiarta,Penerapan Algoritma K-Nearest Neighbor pada Information Retrieval dalam Penentuan Topik Referensi Tugas Akhir,publikasi dinus,Vol 1,No. 2,(2016).
-- [[3]]
+- [[2]](https://publikasi.dinus.ac.id/index.php/jais/article/view/1189/)Ramadhan Rakhmat Sani, Junta Zeniarja, Ardytha Luthfiarta,Penerapan Algoritma K-Nearest Neighbor pada Information Retrieval dalam Penentuan Topik Referensi Tugas Akhir,publikasi dinus,Vol 1,No. 2,2016.
+- [[3]] Kelleher, John D, et al. "Machine Learning for Predictive Data Analytics". MIT Press.2020
 
 
 
