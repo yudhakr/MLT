@@ -142,7 +142,7 @@ Rumus diatas merupakan metrik akurasi yang menghitung ketepatan model dalam hal 
  [![f1.png](https://i.postimg.cc/VvpxxcJq/f1.png)](https://postimg.cc/GTPgDVJt)
 
 ## Referensi
-
+-[[1]]
 - [[1]](https://publikasi.dinus.ac.id/index.php/jais/article/view/1189/)Penerapan Algoritma K-Nearest Neighbor pada Information Retrieval dalam Penentuan Topik Referensi Tugas Akhir
 - [[2]](https://simdos.unud.ac.id/uploads/file_penelitian_1_dir/721bdb509a6f0bb9ccca6d7374b86759.pdf)INOVASI TEKNOLOGI INFORMASI DAN KOMUNIKASI DALAM MENUNJANG TECHNOPRENEURSHIP
 - [[3]](https://stephenallwright.com/baseline-machine-learning-models/ )baseline model in machine learning.
