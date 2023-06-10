@@ -148,8 +148,9 @@ Rumus diatas merupakan metrik akurasi yang menghitung ketepatan model dalam hal 
 - [[3]](https://stephenallwright.com/baseline-machine-learning-models/ )baseline model in machine learning.
 - [[4]](http://etd.repository.ugm.ac.id/penelitian/detail/183405)(Pendeteksian Anomali Menggunakan Local Outlier Factor Pada Data Untuk Meningkatkan Performa Prediksi Jumlah Obat.
 - [[5]](https://www.dicoding.com/academies/319/tutorials/18595) Machine Learning Terapan Dicoding (Juni 2023)
-
-
+- [[6]](https://scikit-learn.org/stable/)scikit-learn Machine Learning in Python
+- [[7]](https://www.kaggle.com/datasets/adityakadiwal/water-potability) Water Quality Drinking water potability
+- [[8]](https://plotly.com/python/)Plotly Open Source Graphing Library for Python
 
 
 
