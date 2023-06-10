@@ -33,7 +33,7 @@ Solusi yang dapat dilakukan untu memenuhi tujuan diantaranya :
   - Melakukan **_pembagian dataset_** menjadi dua bagian dengan rasio 80% untuk data latih dan 20% untuk data uji.
   - Melakukan penghapusan data pencilan pada data latih dengan metode LOF **_(Local Outlier Factor)_**.
   - Melakukan standardisasi data pada semua fitur data **_(Standar Scaler)_**.
-
+* 
 * Untuk pembuatan model menggunakan model K-Nearest Neighbor sebagai model baseline.Algoritma tersebut dipilih karena mudah digunakan dan juga cocok untuk kasus ini.Algoritma ini mngasumsikan bahwa sesuatu yang serupa serta selalu berdekatan Berikut cara kerja algoritmanya, 
 - Melakukan pemuatan data
 - Menginisialisasikan nilai K(banyak tetangga/kelompok)
@@ -137,12 +137,13 @@ Pada proyek ini, model yang dikembangkan adalah Dalam proyek ini, sistem yang di
 
 Rumus diatas merupakan metrik akurasi yang menghitung ketepatan model dalam hal ini meprediksi data dengan data yang sebenarnya.Untuk kelebihan sendiri dalam pembuatan model klasifikasi baik itu klasifikasi antar dua kelas maupun kategori, selain itu perthitungan ini memiliki kekurangan yang biasanya dapat menyesatkan terutama data yang tidak seimbang.
 
-* _Precision_ merupakan numerik untuk melakukan prediksi benar positifnya hasil suatu prediksi,untuk rumus sendiri _Precision_ = (TP)/(TP + TP)
+* _Precision_ merupakan numerik untuk melakukan prediksi benar positifnya hasil suatu prediksi. Kelebihan dari metriks ini berfokus pada bagaimana performa (prediksi) model terhadap label data positif, kekurangannya metriks ini tidak memperhitungkan label negatifnya,untuk rumus sendiri _Precision_ = (TP)/(TP + TP)
 
- *_Recall_ merupakan metrik untuk memprediksi benar positifnya berdasarkan keseluruhan data,untuk rumus sendiri _Recall_ = (TP)/(TP + FN)
- * _f1-score f1-score merupakan metrik perbandingan antara precision dan recall yang dibobotkan,sedangkan Rumus f1-score sebagai berikut:
+ *_Recall_ merupakan metrik untuk memprediksi benar positifnya berdasarkan keseluruhan data. Recall merupakan metrik dalam kasus klasifikasi yang digunakan untuk menghitung seberapa baik model memprediksi label positif terhadap semua label data positif, untuk rumus sendiri _Recall_ = (TP)/(TP + FN)
+ * _f1-score f1-score merupakan metrik perbandingan antara precision dan recall yang dibobotkan.metrik dalam kasus klasifikasi yang digunakan untuk menghitung seberapa baik hasil prediksi model (precision) dan seberapa lengkap hasil prediksinya (recall).sedangkan Rumus f1-score sebagai berikut:
 $$F1 Score = 2* (Recall*Precission) / (Recall + Precission) $$
- 
+*** _Catatan : Nilai beta = 1 (f1-skor)_***
+Kelebihan dari metriks ini menutup semua kekurangan yang ada pada precision dan recall. Namun kekurangannya adalah f1-score tidak memperhitungkan hasil prediksi benar pada label negatif.
  
 
 ## Referensi
