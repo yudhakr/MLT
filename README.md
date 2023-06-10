@@ -151,7 +151,9 @@ Kelebihan dari metriks ini menutup semua kekurangan yang ada pada precision dan 
 ## Referensi
 - [[1]](http://publikasi.dinus.ac.id/index.php/technoc/article/view/5901)Hardiana Said, Nur Hafifah Matondang, Helena Nurramdhani Irmanda,PENERAPAN ALGORITMA K-NEAREST NEIGHBOR UNTUK MEMPREDIKSI KUALITAS AIR YANG DAPAT DIKONSUMSI,publikasi dinus,Vol 21, No. 2,2020.
 - [[2]](https://publikasi.dinus.ac.id/index.php/jais/article/view/1189/)Ramadhan Rakhmat Sani, Junta Zeniarja, Ardytha Luthfiarta,Penerapan Algoritma K-Nearest Neighbor pada Information Retrieval dalam Penentuan Topik Referensi Tugas Akhir,publikasi dinus,Vol 1,No. 2,2016.
-- [[3]] Kelleher, John D, et al. "Machine Learning for Predictive Data Analytics". MIT Press.2020
+- [[3]] Kelleher, John D, et al. "Machine Learning for Predictive Data Analytics". MIT Press.2020.
+- [[4]](https://www.kaggle.com/datasets/adityakadiwal/water-potability) Aitya Kadiwak,Water Quality Drinking water potability,2021, from https://www.kaggle.com/datasets/adityakadiwal/water-potability
+- [[5]] Khoiri. (2020). Cara Menghitung Mean Squared Error (MSE). Khoiri. Retrieved September 16, 2022, from https://www.khoiri.com/2020/12/pengertian-dan-cara-menghitung-mean-squared-error-mse.html
 
 
 
