@@ -15,7 +15,7 @@ Masalah kualitas air yang umum terjadi termasuk kontaminasi feses, penyakit yang
 terutama untuk dikomsumsi.Kualitas fisikokimia, bakteriologis, dan konsentrasi logam jejak sampel air dari sumber yang diolah, keran jalan, dan wadah penyimpanan rumah tangga sebagian besar berada dalam kisaran yang diizinkan standar air minum WHO dan SANS.
 HQ untuk anak-anak dan orang dewasa kurang dari satu, menunjukkan bahwa air minum menimbulkan ancaman kesehatan yang kurang signifikan bagi anak-anak dan orang dewasa. 
 
-Format Referensi: [Judul Referensi](https://www.nature.com/articles/s41598-022-10092-4)
+
 
 ## Business Understanding
 ---
@@ -42,7 +42,7 @@ Solusi yang dapat dilakukan untu memenuhi tujuan diantaranya :
 
 * Untuk pembuatan model menggunakan model K-Nearest Neighbor.Algoritma tersebut dipilih karena mudah digunakan dan juga cocok untuk kasus ini. Berikut cara kerja, 
 untuk Hitungan euclidin distance dengan rumus
-[![rumus1.png](https://i.postimg.cc/44S3ZzWc/rumus1.png)](https://postimg.cc/mh74yFfZ)
+$$d(xi, x1) = √(x₁ − xu)² + (xi2 − X12)² + ... + (Tip − Xlp) $$
 kelebihan dan kekurangan algoritma Random Forest dan K-Nearest Neighbor:
     * Cara kerja Algoritma K-Nearest Neighbor [[1]](https://publikasi.dinus.ac.id/index.php/jais/article/view/1189/):
         * Menentukan jumlah tetangga terdekat K
