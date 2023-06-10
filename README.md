@@ -123,10 +123,17 @@ Pada Model berbandingan dengan algoritma K-Nearest Neighbor,dimana membuktikan a
 ## Evalution
 Pada proyek ini, model yang dikembangkan adalah Dalam proyek ini, sistem yang dikembangkan adalah suatu jenis klasifikasi dan mengukur performanya menggunakan metrik akurasi, f1-skor, recall, dan presisi. Berikut adalah hasil pengukuran dari model yang dipilih, yakni model yang menggunakan algoritma Pohon Acak (Random Forest), dengan metrik akurasi, f1-skor, recall, dan precision.
 * Laporan hasil klasifikasi model_baseline
-[![Evaluation-1.png](https://i.postimg.cc/52GpLzHc/Evaluation-1.png)](https://postimg.cc/18GpZfcM)
+
+|   |              | precision |  recall | f1-score |   support |
+|---|-------------:|----------:|--------:|---------:|----------:|
+|   |  Not Potable |  0.707124 | 0.67000 | 0.688062 | 400.00000 |
+|   |    Potable   |  0.686461 | 0.72250 | 0.704019 | 400.00000 |
+|   |   accuracy   |  0.696250 | 0.69625 | 0.696250 |   0.69625 |
+|   |   macro avg  |  0.696792 | 0.69625 | 0.696041 | 800.00000 |
+|   | weighted avg |  0.696792 | 0.69625 | 0.696041 | 800.00000 |
 
 * Rumus Akurasi
-[![akurasi-1.png](https://i.postimg.cc/BnzbC1Yw/akurasi-1.png)](https://postimg.cc/9DGcmzjG)
+<img width="251" alt="akurasi 1" src="https://github.com/yudhakr/MLT/assets/84507343/9c4abd6f-704e-475d-b343-f647934bb0a8">
 
 Rumus diatas merupakan metrik akurasi yang menghitung ketepatan model dalam hal ini meprediksi data dengan data yang sebenarnya.Untuk kelebihan sendiri dalam pembuatan model klasifikasi baik itu klasifikasi antar dua kelas maupun kategori, selain itu perthitungan ini memiliki kekurangan yang biasanya dapat menyesatkan terutama data yang tidak seimbang.
 
@@ -134,7 +141,7 @@ Rumus diatas merupakan metrik akurasi yang menghitung ketepatan model dalam hal 
 
  *_Recall_ merupakan metrik untuk memprediksi benar positifnya berdasarkan keseluruhan data,untuk rumus sendiri _Recall_ = (TP)/(TP + FN)
  * _f1-score f1-score merupakan metrik perbandingan antara precision dan recall yang dibobotkan,sedangkan Rumus f1-score sebagai berikut:
- [![f1.png](https://i.postimg.cc/VvpxxcJq/f1.png)](https://postimg.cc/GTPgDVJt)
+$$F1 Score = 2* (Recall*Precission) / (Recall + Precission) $$
  
  
 
