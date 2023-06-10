@@ -86,7 +86,7 @@ Selain itu disini melakukan visualisasi data yang kosng
 
 ## Data Preparation
 Pada proyek ini teknik data preparation yang dilakukan diantaranya :
-[![data-kosong.png](https://i.postimg.cc/zXhj7ygf/data-kosong.png)](https://postimg.cc/zVJKXXpm)
+[![[data kosong.png](https://ibb.co/mSxhTrZ)]
 * Karena data tidak memiliki column categorical/object jadi skip langkah
 * Karena data yang kosong pada dataset cukup banyak, pemilihan metode untuk menghapus data saja bukanlah hal yang bijak. Hal tersebut akan mengakibatkan model yang nantinya akan dibuat kehilangan banyak informasi. Sehingga dipilihlah cara untuk memanipulasi datanya, dengan mengisi data yang kosong dengan nilai rata-rata kolomnya. Data rata-rata kolom dipilih karena merupakan data yang dipastikan bukan data pencilan. Sehingga dengan menganggap data kosong sebagai data rata-rata, model tetap dapat memperoleh informasi dari data yang ada pada kolom lainnya. Proses yang dilakukan pertama-tama dengan cara mengambil nilai rata-rata dari kolom yang memiliki data kosong, kemudian memasukannya kepada setiap data kosong sebagai pengganti dari datanya. Semua proses tersebut dilakukan dengan slicing data dengan kondisi 
 * Untuk mengatasi data kosong dengan nilai rata-rata kolom (mean substition),maka rata-rata yang memiliki data kosong dengan membuat kolom Potability = 0 dan selanjutnya membuat kolom Potability = 1
