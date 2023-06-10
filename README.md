@@ -18,14 +18,11 @@ Maka dari permasalahan tersebut penulis ingin membuat sistem model nalisis Predi
 ---
 #### Problem Statements
 Berdasarkan latar belakang diatas, berikut ini rumusan masalah yang dapat diselesaikan pada proyek ini diantaranya:
-* Bagaimana cara membuat menprediksi potabilitas air berdasarkan atribut-atribut yang ada ?
-* Bagaimana cara membuat model untuk memprediksi kualitas air bersih dimasyarakat
-* Berapa mengetahui air tersebut layak atau tidak dikomsumsi ?
-
+* Bagaimana cara melakukan pra-pemrosesan data air agar dapat digunakan untuk membuat model yang baik ?
+* Bagaimana cara membuat model machine learning untuk mengklasifikasikan data air yang dapat dikonsumsi oleh manusia ?
 
 #### Goals
-* Untuk mengetahui kualitas air dan potabilitasnya dengan  pembuatan modelnya
-* Mengetahui cara pembuatan model machine learning untuk Analisis Prediktif Data Air Bersih Di Masyarakat.
+* Melakukan preprocessing data sehingga data tersebut siap untuk di latih oleh model Machine Learning
 * Membuat model _machine learning_ untuk mengklasifikasi data air yang layak dikonsumsi dengan nilai akurasi mencapai 90%
 
 #### Solution Statements
@@ -37,26 +34,31 @@ Solusi yang dapat dilakukan untu memenuhi tujuan diantaranya :
   - Melakukan penghapusan data pencilan pada data latih dengan metode LOF **_(Local Outlier Factor)_**.
   - Melakukan standardisasi data pada semua fitur data **_(Standar Scaler)_**.
 
-* Untuk pembuatan model menggunakan model K-Nearest Neighbor.Algoritma tersebut dipilih karena mudah digunakan dan juga cocok untuk kasus ini. Berikut cara kerja, 
-untuk Hitungan euclidin distance dengan rumus
+* Untuk pembuatan model menggunakan model K-Nearest Neighbor sebagai model baseline.Algoritma tersebut dipilih karena mudah digunakan dan juga cocok untuk kasus ini.Algoritma ini mngasumsikan bahwa sesuatu yang serupa serta selalu berdekatan Berikut cara kerja algoritmanya, 
+- Melakukan pemuatan data
+- Menginisialisasikan nilai K(banyak tetangga/kelompok)
+- Melakukan penambahkan jarak dan urutan dari contoh pada koleksi yang berururutan (hitungan euclidin distance) dengan rumus
 
 $$d(xi, x1) = √(x₁ − xu)² + (xi2 − X12)² + ... + (Tip − Xlp) $$
+- Memilih entri K paling awal pada koleksi yang beurutan
+- Dapatkan label dari dari entri K yang dipilih
+- Apabila kasus regresi, kembalikan nilai rata-ratanya. Apabila kasus klasifikasi, kembalikan labelnya
 
 kelebihan dan kekurangan algoritma Random Forest dan K-Nearest Neighbor:
-    * Cara kerja Algoritma K-Nearest Neighbor [[1]](https://publikasi.dinus.ac.id/index.php/jais/article/view/1189/):
+    * Cara kerja Algoritma K-Nearest Neighbor 
         * Menentukan jumlah tetangga terdekat K
         * Menghitung jarak dokumen _testing_ ke dokumen _training_
         * Urutkan data berdasarkan data yang mempunyai jarak Euclidean terkecil
         * Tentukan kelompok testing berdasarkan label pada K.
-    * Kelebihan dan kekurangan Algoritma K-Nearest Neighbor [[2]](https://simdos.unud.ac.id/uploads/file_penelitian_1_dir/721bdb509a6f0bb9ccca6d7374b86759.pdf):
+    * Kelebihan dan kekurangan Algoritma K-Nearest Neighbor 
         * KNN memiliki beberapa kelebihan yaitu bahwa algoritmanya tangguh terhadap _training_ data yang _noisy_ dan efektif apabila data latihnya besar.
         * Kekurangan pada algoritma KKN yaitu perlu menentukan nilai dari parameter K (jumlah dari tetangga terdekat), Pembelajaran berdasarkan jarak tidak jelas mengenai jenis jarak apa yang harus digunakan dan atribut mana yang harus digunakan untuk mendapatkan hasil yang terbaik dan Biaya komputasi cukup tinggi karena diperlukan perhitungan dari jarak tiap sample uji pada keseluruhan sample latih.
 
 ## Data Understanding
-[![dataset.png](https://i.postimg.cc/2689THMZ/dataset.png)](https://postimg.cc/gwQK2KYz)
 
+[![dataset.png](https://i.postimg.cc/FRvZwDbn/dataset.png)](https://postimg.cc/t1rWxdMh)
 Untuk informasi mengenai dataset  yang digunakan dalam proyak menggunakan data untuk mengembangakn proyek ini berasal dari
-|Sumber                | [Kaggle Dataset : Water Quality](https://www.kaggle.com/datasets/adityakadiwal/water-potability) |
+|Sumber               |[Kaggle Dataset : Water Quality](https://www.kaggle.com/datasets/adityakadiwal/water-potability) |
 |-----------------------|----------------------------------------------------------------------------------|
 | Lisensi               | Public Domain                                                                    |
 | Kategori              | Kesehatan, Lingkungan, Kesehatan Masyarakat                                      |
@@ -78,25 +80,20 @@ Pada dataset yang digunakan " Analisis Prediktif Data Air Bersih Di Masyarakat" 
 9. **Turbidity**: adalah Kekeruhan yang berasal sifat air dalam memancarkan cahaya, dan uji ini digunakan untuk menunjukkan kualitas pembuangan limbah terkait dengan zat koloid. Nilai kekeruhan rata-rata yang diperoleh untuk Kampus Wondo Genet (0,98 NTU) lebih rendah dari nilai yang direkomendasikan oleh WHO yaitu 5,00 NTU.
 10. **Potability**: adalah air aman untuk dikonsumsi oleh manusia, di mana 1 berarti dapat diminum dan 0 berarti tidak dapat diminum.
 
-Selain itu disini melkukan visualisasi data yang kosng
-[![visualisasi-data.png](https://i.postimg.cc/0jYX95F5/visualisasi-data.png)](https://postimg.cc/xNd3RQ9B)
-[![visualisasi-data-2.png](https://i.postimg.cc/zXJY34j2/visualisasi-data-2.png)](https://postimg.cc/Z0DMM7X6)
+Selain itu disini melakukan visualisasi data yang kosng
+[![visualisasi-data.png](https://i.postimg.cc/0NRdJc42/visualisasi-data.png)](https://postimg.cc/k2st0F9k)
+[![visualisasi-data-2.png](https://i.postimg.cc/kM1QynHH/visualisasi-data-2.png)](https://postimg.cc/grhLzPmy)
 
 ## Data Preparation
 Pada proyek ini teknik data preparation yang dilakukan diantaranya :
+[![data-kosong.png](https://i.postimg.cc/zXhj7ygf/data-kosong.png)](https://postimg.cc/zVJKXXpm)
+* Karena data tidak memiliki column categorical/object jadi skip langkah
+* Karena data yang kosong pada dataset cukup banyak, pemilihan metode untuk menghapus data saja bukanlah hal yang bijak. Hal tersebut akan mengakibatkan model yang nantinya akan dibuat kehilangan banyak informasi. Sehingga dipilihlah cara untuk memanipulasi datanya, dengan mengisi data yang kosong dengan nilai rata-rata kolomnya. Data rata-rata kolom dipilih karena merupakan data yang dipastikan bukan data pencilan. Sehingga dengan menganggap data kosong sebagai data rata-rata, model tetap dapat memperoleh informasi dari data yang ada pada kolom lainnya. Proses yang dilakukan pertama-tama dengan cara mengambil nilai rata-rata dari kolom yang memiliki data kosong, kemudian memasukannya kepada setiap data kosong sebagai pengganti dari datanya. Semua proses tersebut dilakukan dengan slicing data dengan kondisi 
+* Untuk mengatasi data kosong dengan nilai rata-rata kolom (mean substition),maka rata-rata yang memiliki data kosong dengan membuat kolom Potability = 0 dan selanjutnya membuat kolom Potability = 1
 
-* Untuk mengatasi data kosong dengan nilai rata-rata kolom (mean substition),maka rata-rata yang memiliki data kosong dengan membuat kolom Potability = 0
-
-
-* Ini berdasarkan rata-rata data kosong, dengan kolom Portability = 1
-
-* Ini berdasarkan data pada kolom yang memiliki data kosong (data keseluruhan)
-[![prepation-3.png](https://i.postimg.cc/GhkGkFQR/prepation-3.png)](https://postimg.cc/F7HYvJ8C)
-
-
+menggunakan panda
 * Ini melakukan pengganti data kosong dengan nilai rata-rata kolom dengan memasukan kedalam variable df. Dalam hal ini, kita menggunakan nilai rata-rata dari masing-masing kolom sebagai nilai pengganti untuk nilai-nilai yang hilang. Argumen inplace=True digunakan untuk melakukan perubahan langsung pada dataframe df tanpa perlu menyimpan hasilnya dalam variabel baru,juga mengecek kembali nilai yang kosong pada dataset.
-[![prepation-4.png](https://i.postimg.cc/Dw4NnYdh/prepation-4.png)](https://postimg.cc/0zxnCnBX)
-[![prepation-4-5.png](https://i.postimg.cc/Bvxw1LVw/prepation-4-5.png)](https://postimg.cc/Lq8VcXRz)
+
 * Disini perbedaan antara nilai rata-rata dan median Air Minum dan Air Non-Minum sangat kecil. Jadi menggunakan median keseluruhan fitur untuk menghubungkan nilai
 
 * Disini melakukan pengecekan total baris dalam kolom dari dataset
@@ -140,15 +137,9 @@ Rumus diatas merupakan metrik akurasi yang menghitung ketepatan model dalam hal 
  [![f1.png](https://i.postimg.cc/VvpxxcJq/f1.png)](https://postimg.cc/GTPgDVJt)
 
 ## Referensi
--[[1]]
-- [[1]](https://publikasi.dinus.ac.id/index.php/jais/article/view/1189/)Penerapan Algoritma K-Nearest Neighbor pada Information Retrieval dalam Penentuan Topik Referensi Tugas Akhir
-- [[2]](https://simdos.unud.ac.id/uploads/file_penelitian_1_dir/721bdb509a6f0bb9ccca6d7374b86759.pdf)INOVASI TEKNOLOGI INFORMASI DAN KOMUNIKASI DALAM MENUNJANG TECHNOPRENEURSHIP
-- [[3]](https://stephenallwright.com/baseline-machine-learning-models/ )baseline model in machine learning.
-- [[4]](http://etd.repository.ugm.ac.id/penelitian/detail/183405)(Pendeteksian Anomali Menggunakan Local Outlier Factor Pada Data Untuk Meningkatkan Performa Prediksi Jumlah Obat.
-- [[5]](https://www.dicoding.com/academies/319/tutorials/18595) Machine Learning Terapan Dicoding (Juni 2023)
-- [[6]](https://scikit-learn.org/stable/)scikit-learn Machine Learning in Python
-- [[7]](https://www.kaggle.com/datasets/adityakadiwal/water-potability) Water Quality Drinking water potability
-- [[8]](https://plotly.com/python/)Plotly Open Source Graphing Library for Python
+- [[1]](http://publikasi.dinus.ac.id/index.php/technoc/article/view/5901)Hardiana Said, Nur Hafifah Matondang, Helena Nurramdhani Irmanda,PENERAPAN ALGORITMA K-NEAREST NEIGHBOR UNTUK MEMPREDIKSI KUALITAS AIR YANG DAPAT DIKONSUMSI,publikasi dinus,Vol 21, No. 2,2020.
+- [[2]](https://publikasi.dinus.ac.id/index.php/jais/article/view/1189/)Ramadhan Rakhmat Sani, Junta Zeniarja, Ardytha Luthfiarta,Penerapan Algoritma K-Nearest Neighbor pada Information Retrieval dalam Penentuan Topik Referensi Tugas Akhir,publikasi dinus,Vol 1,No. 2,(2016).
+- [[3]]
 
 
 
