@@ -4,14 +4,15 @@ Judul proyek : "Analisis Prediktif Data Air Bersih Di Masyarakat".
 
 ## Domain Proyek
 [![Analisis-Prediktif-Data-Air-Bersih-Di-Masyarakat.jpg](https://i.postimg.cc/pTbscM81/Analisis-Prediktif-Data-Air-Bersih-Di-Masyarakat.jpg)](https://postimg.cc/DW6QmDxq)
-Kualitas air yang baik adalah faktor penting bagi kesehatan manusia.
+   Kualitas air yang baik adalah faktor penting bagi kesehatan manusia.
 Manusia sangat bergantung pada air yang aman dan bersih untuk memenuhi kebutuhan sehari-hari, seperti minum, memasak, dan menjaga kebersihan pribadi.
 Air yang terkontaminasi oleh polusi, seperti logam berat, pestisida, bakteri, dan virus, dapat menyebabkan berbagai masalah kesehatan yang serius, termasuk penyakit perut, masalah pernapasan, keracunan, dan gangguan sistem kekebalan tubuh. 
 
-berdasarkan terori masalah kualitas air yang umum terjadi termasuk kontaminasi feses, penyakit yang disebabkan oleh air yang tidak aman, dan tantangan akibat perubahan iklim dan faktor lainya yang menurunnya kualitas air
+   Berdasarkan terori masalah kualitas air yang umum terjadi termasuk kontaminasi feses, penyakit yang disebabkan oleh air yang tidak aman, dan tantangan akibat perubahan iklim dan faktor lainya yang menurunnya kualitas air
 terutama untuk dikomsumsi.Kualitas fisikokimia, bakteriologis, dan konsentrasi logam jejak sampel air dari sumber yang diolah, keran jalan, dan wadah penyimpanan rumah tangga sebagian besar berada dalam kisaran yang diizinkan standar air minum WHO dan SANS.
 
-HQ untuk anak-anak dan orang dewasa kurang dari satu, menunjukkan bahwa air minum menimbulkan ancaman kesehatan yang kurang signifikan bagi anak-anak dan orang dewasa. 
+Maka dari permasalahan tersebut penulis ingin membuat sistem model nalisis Prediktif Data Air Bersih Di Masyarakat berdasarkan variabel-variabel tertentu,sehingga masyarakat akan tahu dan berhati-hati dalam penggunaan air dan tahu cara menglola air yang terkontaminasi material tertentu.
+    
 [[1]](https://www.mendeley.com/search/?page=1&query=%20K-Nearest%20Neighbor%20air%20bersih&sortBy=relevance)
 
 
