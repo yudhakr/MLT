@@ -1,12 +1,9 @@
 
 # Laporan Proyek Machine Learning - Ayudha Kusuma Rahmadhani
+Judul proyek : "Analisis Prediktif Data Air Bersih Di Masyarakat".
 
 ## Domain Proyek
-Domain proyek yang dipilih dalam proyek machine learning ini adalah mengenai kesehatan dengan judul proyek "Analisis Prediktif Data Air Bersih Di Masyarakat".
 [![Analisis-Prediktif-Data-Air-Bersih-Di-Masyarakat.jpg](https://i.postimg.cc/pTbscM81/Analisis-Prediktif-Data-Air-Bersih-Di-Masyarakat.jpg)](https://postimg.cc/DW6QmDxq)
-
-**Latar Belakang**
-
 Kualitas air yang baik adalah faktor penting bagi kesehatan manusia.
 Manusia sangat bergantung pada air yang aman dan bersih untuk memenuhi kebutuhan sehari-hari, seperti minum, memasak, dan menjaga kebersihan pribadi.
 Air yang terkontaminasi oleh polusi, seperti logam berat, pestisida, bakteri, dan virus, dapat menyebabkan berbagai masalah kesehatan yang serius, termasuk penyakit perut, masalah pernapasan, keracunan, dan gangguan sistem kekebalan tubuh. 
