@@ -33,26 +33,35 @@ Solusi yang dapat dilakukan untu memenuhi tujuan diantaranya :
   - Melakukan **_pembagian dataset_** menjadi dua bagian dengan rasio 80% untuk data latih dan 20% untuk data uji.
   - Melakukan penghapusan data pencilan pada data latih dengan metode LOF **_(Local Outlier Factor)_**.
   - Melakukan standardisasi data pada semua fitur data **_(Standar Scaler)_**.
-* 
-* Untuk pembuatan model menggunakan model K-Nearest Neighbor sebagai model baseline.Algoritma tersebut dipilih karena mudah digunakan dan juga cocok untuk kasus ini.Algoritma ini mngasumsikan bahwa sesuatu yang serupa serta selalu berdekatan Berikut cara kerja algoritmanya,[5]
+
+  Poin pra-pemrosesan data akan dibahas lebih lanjut pada bagian `Data Preparation`
+ 
+* Untuk pembuatan model menggunakan model __K-Nearest Neighbor__ sebagai model baseline.Algoritma tersebut dipilih karena mudah digunakan dan juga cocok untuk kasus ini.Algoritma ini mngasumsikan bahwa sesuatu yang serupa serta selalu berdekatan Berikut cara kerja algoritmanya,[5]
 - Melakukan pemuatan data
 - Menginisialisasikan nilai K(banyak tetangga/kelompok)
 - Melakukan penambahkan jarak dan urutan dari contoh pada koleksi yang berururutan (hitungan euclidin distance) dengan rumus
 
 $$d(xi, x1) = √(x₁ − xu)² + (xi2 − X12)² + ... + (Tip − Xlp) $$
+
 - Memilih entri K paling awal pada koleksi yang beurutan
 - Dapatkan label dari dari entri K yang dipilih
 - Apabila kasus regresi, kembalikan nilai rata-ratanya. Apabila kasus klasifikasi, kembalikan labelnya
+Selain itu, berikut ini merupakan kelebihan dan kekurangan algoritma dari K-Nearest Neighbor.
+   Kelebihan :
+- Algoritmanya mudah digunakan dan sederhana
+- Algoritmanya sangat fleksibel, dapat diimplementasikan pada kasus klasifikasi, regresi dan pencarian
+Kekurangan :
+- Algoritme menjadi lebih lambat secara signifikan karena jumlah contoh dan/atau prediktor/variabel yang meningkat.[[2]](https://publikasi.dinus.ac.id/index.php/jais/article/view/1189/)
 
-kelebihan dan kekurangan algoritma Random Forest dan K-Nearest Neighbor:
-    * Cara kerja Algoritma K-Nearest Neighbor 
-        * Menentukan jumlah tetangga terdekat K
-        * Menghitung jarak dokumen _testing_ ke dokumen _training_
-        * Urutkan data berdasarkan data yang mempunyai jarak Euclidean terkecil
-        * Tentukan kelompok testing berdasarkan label pada K.
-    * Kelebihan dan kekurangan Algoritma K-Nearest Neighbor 
-        * KNN memiliki beberapa kelebihan yaitu bahwa algoritmanya tangguh terhadap _training_ data yang _noisy_ dan efektif apabila data latihnya besar.
-        * Kekurangan pada algoritma KKN yaitu perlu menentukan nilai dari parameter K (jumlah dari tetangga terdekat), Pembelajaran berdasarkan jarak tidak jelas mengenai jenis jarak apa yang harus digunakan dan atribut mana yang harus digunakan untuk mendapatkan hasil yang terbaik dan Biaya komputasi cukup tinggi karena diperlukan perhitungan dari jarak tiap sample uji pada keseluruhan sample latih.  [[2]](https://publikasi.dinus.ac.id/index.php/jais/article/view/1189/)
+* Kemudian __model baseline tersebut dikembangkan__ dengan pengaturan hyperparameter otomatis dengan __HalvingGridSearchCV__. HalvingGridSearchCV merupakan metode pencarian parameter yang optimal dengan Successive Halving. Cara kerja algorimat ini adalah sebagai berikut
+- Sampel secara acak satu set konfigurasi hyperparameter
+- Evaluasi performa semua konfigurasi yang tersisa saat ini
+- Abaikan bagian bawah dari konfigurasi dengan skor terburuk
+- Kembali ke tahap ke-2 hingga hanya tersisa satu set konfigurasi
+
+Kelebihan dari pengaturan hyperparameter ini membuat mengevaluasi penggunaan set konfigurasi dengan resource yang sedikit pada iterasi pertama, sedangkan pada iterasi selanjutnya resource mulai ditambah. Hal ini pun menjadi kekurangannya karena set konfigurasi yang dievaluasi dengan resource yang sedikit belum tentu akan memiliki hasil evaluasi yang buruk dengan resource yang banyak.[8]
+
+
 
 ## Data Understanding
 <img width="875" alt="dataset" src="https://github.com/yudhakr/MLT/assets/84507343/a07fef2d-96a7-4384-944a-c4a4b19281f9">
@@ -144,7 +153,7 @@ Pada proyek ini teknik data preparation yang dilakukan diantaranya :
 
 Setelah  melakukan pra-pemrosesan pada dataset. Untuk selanjutnya adalah modeling terhadap data. Pada tahap ini menggunakan 2 algoritma K-Nearest dengan  menggunakan data model terlatih sehingga data diukur bilai akurasinya.
 
-* Model baseline adalah model awal yang digunakan sebagai pembanding atau titik awal dalam membangun model yang lebih kompleks atau dioptimalkan.melatih model baseline menggunakan data latih (X_train dan y_train). Metode fit() digunakan untuk mengajarkan model untuk mempelajari pola atau hubungan antara fitur-fitur dalam data latih dan label yang sesuai.
+* Model baseline adalah  model dasar dengan menggunakan modul scikit-learn yakni -__KNeighborsClassifier__ tanpa menggunakan parameter tambahan. Lalu melakukan prediksi kepada data ujinya.
 
 |   |                         | Not Potable |          |           |        |  Potable |           |        |
 |---|------------------------:|------------:|---------:|----------:|-------:|---------:|-----------|--------|
@@ -160,8 +169,9 @@ Pada Model berbandingan dengan algoritma K-Nearest Neighbor,dimana membuktikan a
 
 __Gambar 5__: Pada gambar visual mengenai model basline dan menghasilkan confussion matrix cukup rendah
 
+* Kemudian setelah melihat kinerja model baseline, agar dapat bekerja lebih optimal lagi maka digunakan sebuah fungsi untuk mencari hyperparameter yang optimal dengan __HalvingGridSearchCV__. Setelah ditemukan yang optimal, kemudian hyperparameter tersebut diterapkan ke model baseline.
 
-* Hasil Model yang dikembangkan (model yang dapat digunakan
+* Hasil Model yang dikembangkan (model yang dapat digunakan)
 <img width="338" alt="model 6" src="https://github.com/yudhakr/MLT/assets/84507343/79d43bee-883a-48a6-9c2a-f21d99e080ee">
 
 __Gambar 6__: Gambar diatas menerangkan model confussion matrix yang dikembangkan menghasilkan kinerja yang lebih baik dalam memprediksi kualitas air yang dapat diminum, dengan akurasi, f1-score, presisi, dan recall yang lebih tinggi
@@ -188,7 +198,7 @@ Rumus diatas merupakan metrik akurasi yang menghitung ketepatan model dalam hal 
 
 * _Precision_ merupakan numerik untuk melakukan prediksi benar positifnya hasil suatu prediksi. Kelebihan dari metriks ini berfokus pada bagaimana performa (prediksi) model terhadap label data positif, kekurangannya metriks ini tidak memperhitungkan label negatifnya,untuk rumus sendiri.[7]
 
-$$_Precision_ = (TP)/(TP + TP) $$
+$$Precision = (TP)/(TP + TP) $$
 
  *_Recall_ merupakan metrik untuk memprediksi benar positifnya berdasarkan keseluruhan data. Recall merupakan metrik dalam kasus klasifikasi yang digunakan untuk menghitung seberapa baik model memprediksi label positif terhadap semua label data positif, untuk rumus sendiri.[7]
  
@@ -209,7 +219,8 @@ Kelebihan dari metriks ini menutup semua kekurangan yang ada pada precision dan 
 - [[4]](https://builtin.com/data-science/correlation-matrix) Sanskar Wagavkar."Introduction to the Correlation Matrix."https://builtin.com/data-science/correlation-matrix [accessed Jun.10 2023]
 - [[5]](https://towardsdatascience.com/machine-learning-basics-with-the-k-nearest-neighbors-algorithm-6a6e71d01761) Harrison, O. (2019, July 14)."Machine Learning Basics with the K-Nearest Neighbors Algorithm". Medium. https://towardsdatascience.com/machine-learning-basics-with-the-k-nearest-neighbors-algorithm-6a6e71d01761 [accessed Jun.10 2023]
 - [[6]](https://statisticsbyjim.com/basics/remove-outliers/) Frost, J."Guidelines for Removing dan Handling Outliers in Data". Statistics By Jim. https://statisticsbyjim.com/basics/remove-outliers/ [accessed Jun.10 2023]
-- [[7]](https://rey1024.medium.com/mengenal-accuracy-precission-recall-dan-specificity-serta-yang-diprioritaskan-b79ff4d77de8) Salma Ghoneim."Accuracy, Recall, Precision, F-Score & Specificity."https://towardsdatascience.com/accuracy-recall-precision-f-score-specificity-which-to-optimize-on-867d3f11124 [accessed Jun.11 2023]
+- [[7]](https://rey1024.medium.com/mengenal-accuracy-precission-recall-dan-specificity-serta-yang-diprioritaskan-b79ff4d77de8) Salma Ghoneim."Accuracy, Recall, Precision, F-Score & Specificity." https://towardsdatascience.com/accuracy-recall-precision-f-score-specificity-which-to-optimize-on-867d3f11124 [accessed Jun.11 2023]
+- [[8]](https://bobrupakroy.medium.com/halving-gridsearch-736b13898327)Bob Rupak Roy."Halving GridSearch." https://bobrupakroy.medium.com/halving-gridsearch-736b13898327 [accessed Jun.12 2023] 
 
 
 
