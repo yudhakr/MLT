@@ -83,36 +83,45 @@ Pada dataset yang digunakan " Analisis Prediktif Data Air Bersih Di Masyarakat" 
 10. **Potability**: adalah air aman untuk dikonsumsi oleh manusia, di mana 1 berarti dapat diminum dan 0 berarti tidak dapat diminum[[3]](https://www.kaggle.com/datasets/adityakadiwal/water-potability).
 
 
-<img width="850" alt="visualisasi data" src="https://github.com/yudhakr/MLT/assets/84507343/8fbf937d-06ed-497b-b343-8c38dc5bb9e5">
+<img width="815" alt="ko1" src="https://github.com/yudhakr/MLT/assets/84507343/29b81f3f-5435-40df-a8bc-764700f784cc">
 
 __Gambar 1__ : Perbandingan setiap variable dan seberapa banyak data yang kosong yang dimuat dalam dataset yang berjumlah 3276
+ 
+ 
 
-
-<img width="419" alt="fitur katagori" src="https://github.com/yudhakr/MLT/assets/84507343/703a6940-e7e8-4241-b12c-50ee373c9e8b">
+<img width="532" alt="fitur katagori" src="https://github.com/yudhakr/MLT/assets/84507343/95dba9e6-a67f-43df-b22b-0019aa43a48a">
 
  __Gambar 2__ : Merupakan visualisasi distribusi kelas pada kolom dengan fitur kategori (Potability) dan menghasilkan potable 39% sedangkan  Not Potable 61%.
  
-
- |          | ph        | Hardness  | Solids    | Chloramines | Sulfate   | Conductivity | Organic_carbon | Trihalomethanes | Turbidity |
-|----------|-----------|-----------|-----------|-------------|-----------|--------------|----------------|-----------------|-----------|
-| ph           | 1.000000  | 0.082096  | -0.089288 | -0.034350   | 0.018203  | 0.018614     | 0.043503          | 0.003354              | -0.039057 |
-| Hardness  | 0.082096  | 1.000000  | -0.046899 | -0.030054   | -0.106923 | -0.023915    | 0.003610          | -0.013013             | -0.014449 |
-| Solids       | -0.089288 | -0.046899 | 1.000000   | -0.070148   | -0.171804 | 0.013831     | 0.010242          | -0.009143             | 0.019546  |
-| Chloramines | -0.034350 | -0.030054 | -0.070148 | 1.000000     | 0.027244 | -0.020486    | -0.012653         | 0.017084              | 0.002363  |
-| Sulfate        | 0.018203  | -0.106923 | -0.171804 | 0.027244    | 1.000000   | -0.016121    | 0.030831           | -0.030274             | -0.011187 |
-| Conductivity | 0.018614  | -0.023915 | 0.013831   | -0.020486   | -0.016121 | 1.000000      | 0.020966           | 0.001285               | 0.005798  |
-| Organic_carbon | 0.043503 | 0.003610  | 0.010242   | -0.012653   | 0.030831  | 0.020966     | 1.000000           | -0.013274             | -0.027308 |
-| Trihalomethanes | 0.003354 | -0.013013 | -0.009143 | 0.017084    | -0.030274 | 0.001285      | -0.013274         | 1.000000               | -0.022145 |
-| Turbidity         | -0.039057 | -0.014449 | 0.019546   | 0.002363     | -0.011187 | 0.005798      | -0.027308         | -0.022145             | 1.000000  |
-
-__Tabel diatas__: Merupakan visualisasi antar korelasi dengan menggunakan fitur numerik yang berasal dari korelasi data.
+ 
+ 
+ ![4](https://github.com/yudhakr/MLT/assets/84507343/aa7051b3-5696-453b-a40e-7d7302e1b0d3)
+ __Gambar 3__ : Merupakan visualisasi antar korelasi dengan menggunakan fitur numerik yang berasal dari korelasi data
 
  
 
+ |   |                 |        ph |  Hardness |    Solids | Chloramines |   Sulfate | Conductivity | Organic_carbon | Trihalomethanes | Turbidity |
+|---|----------------:|----------:|----------:|----------:|------------:|----------:|-------------:|---------------:|----------------:|----------:|
+|   |        ph       |  1.000000 |  0.082096 | -0.089288 |   -0.034350 |  0.018203 |     0.018614 |       0.043503 |        0.003354 | -0.039057 |
+|   |     Hardness    |  0.082096 |  1.000000 | -0.046899 |   -0.030054 | -0.106923 |    -0.023915 |       0.003610 |       -0.013013 | -0.014449 |
+|   |      Solids     | -0.089288 | -0.046899 |  1.000000 |   -0.070148 | -0.171804 |     0.013831 |       0.010242 |       -0.009143 |  0.019546 |
+|   |   Chloramines   | -0.034350 | -0.030054 | -0.070148 |    1.000000 |  0.027244 |    -0.020486 |      -0.012653 |        0.017084 |  0.002363 |
+|   |     Sulfate     |  0.018203 | -0.106923 | -0.171804 |    0.027244 |  1.000000 |    -0.016121 |       0.030831 |       -0.030274 | -0.011187 |
+|   |   Conductivity  |  0.018614 | -0.023915 |  0.013831 |   -0.020486 | -0.016121 |     1.000000 |       0.020966 |        0.001285 |  0.005798 |
+|   |  Organic_carbon |  0.043503 |  0.003610 |  0.010242 |   -0.012653 |  0.030831 |     0.020966 |       1.000000 |       -0.013274 | -0.027308 |
+|   | Trihalomethanes |  0.003354 | -0.013013 | -0.009143 |    0.017084 | -0.030274 |     0.001285 |      -0.013274 |        1.000000 | -0.022145 |
+|   |    Turbidity    | -0.039057 | -0.014449 |  0.019546 |    0.002363 | -0.011187 |     0.005798 |      -0.027308 |       -0.022145 |  1.000000 |
 
-<img width="245" alt="heatmap" src="https://github.com/yudhakr/MLT/assets/84507343/8e334877-5e02-4e12-bc28-c17f41327369">
+__Tabel diatas__: histogram korelasi data antar kolom.
+ 
+ 
+ 
+
+
+<img width="400" alt="heatmap" src="https://github.com/yudhakr/MLT/assets/84507343/f10d5aa4-cac2-4dda-ba1d-1feef3865409">
 
 __Gambar 4__: Merupakan Matrik korelasi yang menunjukan korelasi antar variabel penggunaan matriks korelasi untuk meringkas kumpulan data yang besar dan untuk mengidentifikasi pola dan membuat keputusan yang sesuai dengannya.Setiap sel dalam matriks berisi koefisien korelasi.[4]
+
 
 
 
