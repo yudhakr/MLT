@@ -92,18 +92,27 @@ __Gambar 1__ : Perbandingan setiap variable dan seberapa banyak data yang kosong
 
  __Gambar 2__ : Merupakan visualisasi distribusi kelas pada kolom dengan fitur kategori (Potability) dan menghasilkan potable 39% sedangkan  Not Potable 61%.
  
- ![3](https://github.com/yudhakr/MLT/assets/84507343/54b0ccfb-42b0-4257-8159-e22950aaa4a1)
- 
- __Gambar 3__: Merupakan visualisasi antar korelasi dengan menggunakan fitur numerik yang berasal dari korelasi data.
- 
- 
-<img width="370" alt="antar kolom" src="https://github.com/yudhakr/MLT/assets/84507343/1a0f24b6-904c-40eb-a55e-e49615435613">
 
-__Gambar 4__: Merupakan histogram korelasi data antar kolom.
+ |          | ph        | Hardness  | Solids    | Chloramines | Sulfate   | Conductivity | Organic_carbon | Trihalomethanes | Turbidity |
+|----------|-----------|-----------|-----------|-------------|-----------|--------------|----------------|-----------------|-----------|
+| ph           | 1.000000  | 0.082096  | -0.089288 | -0.034350   | 0.018203  | 0.018614     | 0.043503          | 0.003354              | -0.039057 |
+| Hardness  | 0.082096  | 1.000000  | -0.046899 | -0.030054   | -0.106923 | -0.023915    | 0.003610          | -0.013013             | -0.014449 |
+| Solids       | -0.089288 | -0.046899 | 1.000000   | -0.070148   | -0.171804 | 0.013831     | 0.010242          | -0.009143             | 0.019546  |
+| Chloramines | -0.034350 | -0.030054 | -0.070148 | 1.000000     | 0.027244 | -0.020486    | -0.012653         | 0.017084              | 0.002363  |
+| Sulfate        | 0.018203  | -0.106923 | -0.171804 | 0.027244    | 1.000000   | -0.016121    | 0.030831           | -0.030274             | -0.011187 |
+| Conductivity | 0.018614  | -0.023915 | 0.013831   | -0.020486   | -0.016121 | 1.000000      | 0.020966           | 0.001285               | 0.005798  |
+| Organic_carbon | 0.043503 | 0.003610  | 0.010242   | -0.012653   | 0.030831  | 0.020966     | 1.000000           | -0.013274             | -0.027308 |
+| Trihalomethanes | 0.003354 | -0.013013 | -0.009143 | 0.017084    | -0.030274 | 0.001285      | -0.013274         | 1.000000               | -0.022145 |
+| Turbidity         | -0.039057 | -0.014449 | 0.019546   | 0.002363     | -0.011187 | 0.005798      | -0.027308         | -0.022145             | 1.000000  |
+
+__Tabel diatas__: Merupakan visualisasi antar korelasi dengan menggunakan fitur numerik yang berasal dari korelasi data.
+
+ 
+
 
 <img width="245" alt="heatmap" src="https://github.com/yudhakr/MLT/assets/84507343/8e334877-5e02-4e12-bc28-c17f41327369">
 
-__Gambar 5__: Merupakan Matrik korelasi yang menunjukan korelasi antar variabel penggunaan matriks korelasi untuk meringkas kumpulan data yang besar dan untuk mengidentifikasi pola dan membuat keputusan yang sesuai dengannya.Setiap sel dalam matriks berisi koefisien korelasi.[4]
+__Gambar 4__: Merupakan Matrik korelasi yang menunjukan korelasi antar variabel penggunaan matriks korelasi untuk meringkas kumpulan data yang besar dan untuk mengidentifikasi pola dan membuat keputusan yang sesuai dengannya.Setiap sel dalam matriks berisi koefisien korelasi.[4]
 
 
 
@@ -140,13 +149,13 @@ Pada Model berbandingan dengan algoritma K-Nearest Neighbor,dimana membuktikan a
 * Hasil Model baseline
 <img width="369" alt="model 5" src="https://github.com/yudhakr/MLT/assets/84507343/1a6c166d-ef1c-4a5e-ba3c-e828ae634b6c">
 
-__Gambar 6__: Pada gambar visual mengenai model basline dan menghasilkan confussion matrix cukup rendah
+__Gambar 5__: Pada gambar visual mengenai model basline dan menghasilkan confussion matrix cukup rendah
 
 
 * Hasil Model yang dikembangkan (model yang dapat digunakan
 <img width="338" alt="model 6" src="https://github.com/yudhakr/MLT/assets/84507343/79d43bee-883a-48a6-9c2a-f21d99e080ee">
 
-__Gambar 7__: Gambar diatas menerangkan model confussion matrix yang dikembangkan menghasilkan kinerja yang lebih baik dalam memprediksi kualitas air yang dapat diminum, dengan akurasi, f1-score, presisi, dan recall yang lebih tinggi
+__Gambar 6__: Gambar diatas menerangkan model confussion matrix yang dikembangkan menghasilkan kinerja yang lebih baik dalam memprediksi kualitas air yang dapat diminum, dengan akurasi, f1-score, presisi, dan recall yang lebih tinggi
 
 
 ## Evalution
