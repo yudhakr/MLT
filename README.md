@@ -115,10 +115,12 @@ Setelah  melakukan pra-pemrosesan pada dataset. Untuk selanjutnya adalah modelin
 
 Pada Model berbandingan dengan algoritma K-Nearest Neighbor,dimana membuktikan apakah kedua model dapat diuji dan divisualisasikan pada confussion matrix.
 * Hasil Model baseline
-<img width="369" alt="model 5" src="https://github.com/yudhakr/MLT/assets/84507343/0597d1d3-3f69-4bba-99cf-55f569ba2aee">
+<img width="369" alt="model 5" src="https://github.com/yudhakr/MLT/assets/84507343/1a6c166d-ef1c-4a5e-ba3c-e828ae634b6c">
+
 
 * Hasil Model yang dikembangkan (model yang dapat digunakan
-<img width="338" alt="model 6" src="https://github.com/yudhakr/MLT/assets/84507343/49088d17-3906-4c69-b613-d45f3b69c0ad">
+<img width="338" alt="model 6" src="https://github.com/yudhakr/MLT/assets/84507343/79d43bee-883a-48a6-9c2a-f21d99e080ee">
+
 
 
 ## Evalution
