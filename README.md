@@ -52,7 +52,7 @@ kelebihan dan kekurangan algoritma Random Forest dan K-Nearest Neighbor:
         * Tentukan kelompok testing berdasarkan label pada K.
     * Kelebihan dan kekurangan Algoritma K-Nearest Neighbor 
         * KNN memiliki beberapa kelebihan yaitu bahwa algoritmanya tangguh terhadap _training_ data yang _noisy_ dan efektif apabila data latihnya besar.
-        * Kekurangan pada algoritma KKN yaitu perlu menentukan nilai dari parameter K (jumlah dari tetangga terdekat), Pembelajaran berdasarkan jarak tidak jelas mengenai jenis jarak apa yang harus digunakan dan atribut mana yang harus digunakan untuk mendapatkan hasil yang terbaik dan Biaya komputasi cukup tinggi karena diperlukan perhitungan dari jarak tiap sample uji pada keseluruhan sample latih.
+        * Kekurangan pada algoritma KKN yaitu perlu menentukan nilai dari parameter K (jumlah dari tetangga terdekat), Pembelajaran berdasarkan jarak tidak jelas mengenai jenis jarak apa yang harus digunakan dan atribut mana yang harus digunakan untuk mendapatkan hasil yang terbaik dan Biaya komputasi cukup tinggi karena diperlukan perhitungan dari jarak tiap sample uji pada keseluruhan sample latih[[2]](https://publikasi.dinus.ac.id/index.php/jais/article/view/1189/).
 
 ## Data Understanding
 <img width="875" alt="dataset" src="https://github.com/yudhakr/MLT/assets/84507343/a07fef2d-96a7-4384-944a-c4a4b19281f9">
@@ -80,7 +80,7 @@ Pada dataset yang digunakan " Analisis Prediktif Data Air Bersih Di Masyarakat" 
 7. **Organic_carbon**: adalah  ukuran jumlah total karbon dalam senyawa organik dalam air murni. Menurut US EPA, nilai TOC dalam air yang telah diolah/minum seharusnya <2 mg/L, dan <4 mg/L dalam sumber air yang digunakan untuk pengolahan.
 8. **Trihalomethanes**:adalah bahan kimia yang dapat ditemukan dalam air yang diolah dengan klorin. Konsentrasi THM dalam air minum bervariasi tergantung pada tingkat bahan organik dalam air, jumlah klorin yang diperlukan untuk mengolah air, dan suhu air yang sedang diolah.
 9. **Turbidity**: adalah Kekeruhan yang berasal sifat air dalam memancarkan cahaya, dan uji ini digunakan untuk menunjukkan kualitas pembuangan limbah terkait dengan zat koloid. Nilai kekeruhan rata-rata yang diperoleh untuk Kampus Wondo Genet (0,98 NTU) lebih rendah dari nilai yang direkomendasikan oleh WHO yaitu 5,00 NTU.
-10. **Potability**: adalah air aman untuk dikonsumsi oleh manusia, di mana 1 berarti dapat diminum dan 0 berarti tidak dapat diminum.
+10. **Potability**: adalah air aman untuk dikonsumsi oleh manusia, di mana 1 berarti dapat diminum dan 0 berarti tidak dapat diminum[[3]](https://www.kaggle.com/datasets/adityakadiwal/water-potability).
 
 
 <img width="850" alt="visualisasi data" src="https://github.com/yudhakr/MLT/assets/84507343/8fbf937d-06ed-497b-b343-8c38dc5bb9e5">
@@ -103,7 +103,7 @@ __Gambar 4__: Merupakan histogram korelasi data antar kolom.
 
 <img width="245" alt="heatmap" src="https://github.com/yudhakr/MLT/assets/84507343/8e334877-5e02-4e12-bc28-c17f41327369">
 
-__Gambar 5__: Merupakan gambaran visualisasi heatmap dari korelasi data yang dimana data yang mendekati __1__ maka semakin tinggi korelasi datanya dedangkan mendekati __-1__ akan semakin rendah.
+__Gambar 5__: Merupakan Matrik korelasi yang menunjukan korelasi antar variabel penggunaan matriks korelasi untuk meringkas kumpulan data yang besar dan untuk mengidentifikasi pola dan membuat keputusan yang sesuai dengannya.Setiap sel dalam matriks berisi koefisien korelasi.
 
 
 
@@ -179,11 +179,10 @@ Kelebihan dari metriks ini menutup semua kekurangan yang ada pada precision dan 
  
 
 ## Referensi
-- [[1]](http://publikasi.dinus.ac.id/index.php/technoc/article/view/5901)Hardiana Said, Nur Hafifah Matondang, Helena Nurramdhani Irmanda,Penerapan Algoritma K-Nearest Neighbors Untuk Memprediksi Kualitas Air Yang Dapat Dikonsumsi,publikasi dinus,Vol 21, No. 2,2020.
-- [[2]](https://publikasi.dinus.ac.id/index.php/jais/article/view/1189/)Ramadhan Rakhmat Sani, Junta Zeniarja, Ardytha Luthfiarta,Penerapan Algoritma K-Nearest Neighbor pada Information Retrieval dalam Penentuan Topik Referensi Tugas Akhir,publikasi dinus,Vol 1,No. 2,2016.
-- [[3]] Kelleher, John D, et al. "Machine Learning for Predictive Data Analytics". MIT Press.2020.
-- [[4]](https://www.kaggle.com/datasets/adityakadiwal/water-potability) Aitya Kadiwak,Water Quality Drinking water potability,2021, from https://www.kaggle.com/datasets/adityakadiwal/water-potability.
-- [[5]] Khoiri, Cara Menghitung Mean Squared Error (MSE). Khoiri. Retrieved September 16, 2022, from https://www.khoiri.com/2020/12/pengertian-dan-cara-menghitung-mean-squared-error-mse.html.
+- [[1]](http://publikasi.dinus.ac.id/index.php/technoc/article/view/5901)Hardiana Said, Nur Hafifah Matondang, Helena Nurramdhani Irmanda,Penerapan Algoritma K-Nearest Neighbors Untuk Memprediksi Kualitas Air Yang Dapat Dikonsumsi,publikasi dinus,Vol 21, No. 2,2020.[accesed Jun 10 2023]
+- [[2]](https://publikasi.dinus.ac.id/index.php/jais/article/view/1189/)Ramadhan Rakhmat Sani, Junta Zeniarja, Ardytha Luthfiarta,Penerapan Algoritma K-Nearest Neighbor pada Information Retrieval dalam Penentuan Topik Referensi Tugas Akhir,publikasi dinus,Vol 1,No. 2,2016.[accesed Jun 10 2023]
+- [[3]](https://www.kaggle.com/datasets/adityakadiwal/water-potability) Aitya Kadiwak."Water Quality Drinking water potability".Kaggle.https://www.kaggle.com/datasets/adityakadiwal/water-potability.  [accessed Jun.10 2023]
+- [5]
 
 
 
