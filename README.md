@@ -165,17 +165,22 @@ Pada proyek ini, model yang dikembangkan adalah Dalam proyek ini, sistem yang di
 $$Akurasi = (TP + TN ) / (TP+FP+FN+TN) $$
 
 
-Rumus diatas merupakan metrik akurasi yang menghitung ketepatan model dalam hal ini meprediksi data dengan data yang sebenarnya.Untuk kelebihan sendiri dalam pembuatan model klasifikasi baik itu klasifikasi antar dua kelas maupun kategori, selain itu perthitungan ini memiliki kekurangan yang biasanya dapat menyesatkan terutama data yang tidak seimbang.
+Rumus diatas merupakan metrik akurasi yang menghitung ketepatan model dalam hal ini meprediksi data dengan data yang sebenarnya.Untuk kelebihan sendiri dalam pembuatan model klasifikasi baik itu klasifikasi antar dua kelas maupun kategori, selain itu perthitungan ini memiliki kekurangan yang biasanya dapat menyesatkan terutama data yang tidak seimbang.[7]
 
-* _Precision_ merupakan numerik untuk melakukan prediksi benar positifnya hasil suatu prediksi. Kelebihan dari metriks ini berfokus pada bagaimana performa (prediksi) model terhadap label data positif, kekurangannya metriks ini tidak memperhitungkan label negatifnya,untuk rumus sendiri _Precision_ = (TP)/(TP + TP)
+* _Precision_ merupakan numerik untuk melakukan prediksi benar positifnya hasil suatu prediksi. Kelebihan dari metriks ini berfokus pada bagaimana performa (prediksi) model terhadap label data positif, kekurangannya metriks ini tidak memperhitungkan label negatifnya,untuk rumus sendiri.[7]
 
- *_Recall_ merupakan metrik untuk memprediksi benar positifnya berdasarkan keseluruhan data. Recall merupakan metrik dalam kasus klasifikasi yang digunakan untuk menghitung seberapa baik model memprediksi label positif terhadap semua label data positif, untuk rumus sendiri _Recall_ = (TP)/(TP + FN)
+$$_Precision_ = (TP)/(TP + TP) $$
+
+ *_Recall_ merupakan metrik untuk memprediksi benar positifnya berdasarkan keseluruhan data. Recall merupakan metrik dalam kasus klasifikasi yang digunakan untuk menghitung seberapa baik model memprediksi label positif terhadap semua label data positif, untuk rumus sendiri.[7]
+ 
+$$Recall_ = (TP)/(TP + FN) $$
+ 
  * _f1-score f1-score merupakan metrik perbandingan antara precision dan recall yang dibobotkan.metrik dalam kasus klasifikasi yang digunakan untuk menghitung seberapa baik hasil prediksi model (precision) dan seberapa lengkap hasil prediksinya (recall).sedangkan Rumus f1-score sebagai berikut:
 $$F1 Score = 2* (Recall*Precission) / (Recall + Precission) $$
 
-*** _Catatan : Nilai beta = 1 (f1-skor)_***
+***_Catatan : Nilai beta = 1 (f1-skor)_***
 
-Kelebihan dari metriks ini menutup semua kekurangan yang ada pada precision dan recall. Namun kekurangannya adalah f1-score tidak memperhitungkan hasil prediksi benar pada label negatif.
+Kelebihan dari metriks ini menutup semua kekurangan yang ada pada precision dan recall. Namun kekurangannya adalah f1-score tidak memperhitungkan hasil prediksi benar pada label negatif.[7]
  
 
 ## Referensi
@@ -185,6 +190,7 @@ Kelebihan dari metriks ini menutup semua kekurangan yang ada pada precision dan 
 - [[4]](https://builtin.com/data-science/correlation-matrix) Sanskar Wagavkar."Introduction to the Correlation Matrix."https://builtin.com/data-science/correlation-matrix [accessed Jun.10 2023]
 - [[5]](https://towardsdatascience.com/machine-learning-basics-with-the-k-nearest-neighbors-algorithm-6a6e71d01761) Harrison, O. (2019, July 14)."Machine Learning Basics with the K-Nearest Neighbors Algorithm". Medium. https://towardsdatascience.com/machine-learning-basics-with-the-k-nearest-neighbors-algorithm-6a6e71d01761 [accessed Jun.10 2023]
 - [[6]](https://statisticsbyjim.com/basics/remove-outliers/) Frost, J."Guidelines for Removing dan Handling Outliers in Data". Statistics By Jim. https://statisticsbyjim.com/basics/remove-outliers/ [accessed Jun.10 2023]
+- [[7]](https://rey1024.medium.com/mengenal-accuracy-precission-recall-dan-specificity-serta-yang-diprioritaskan-b79ff4d77de8) Salma Ghoneim."Accuracy, Recall, Precision, F-Score & Specificity."https://towardsdatascience.com/accuracy-recall-precision-f-score-specificity-which-to-optimize-on-867d3f11124 [accessed Jun.11 2023]
 
 
 
