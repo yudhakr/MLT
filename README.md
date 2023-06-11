@@ -89,7 +89,7 @@ Selain itu disini melakukan visualisasi data yang kosng
 
 ## Data Preparation
 Pada proyek ini teknik data preparation yang dilakukan diantaranya :
-<img width="113" alt="data kosong" src="https://github.com/yudhakr/MLT/assets/84507343/6d177780-0d43-4820-8969-1db359fbaa9a">
+
 * Karena data tidak memiliki column categorical/object jadi skip langkah
 * Karena data yang kosong pada dataset cukup banyak, pemilihan metode untuk menghapus data saja bukanlah hal yang bijak. Hal tersebut akan mengakibatkan model yang nantinya akan dibuat kehilangan banyak informasi. Sehingga dipilihlah cara untuk memanipulasi datanya, dengan mengisi data yang kosong dengan nilai rata-rata kolomnya. Data rata-rata kolom dipilih karena merupakan data yang dipastikan bukan data pencilan. Sehingga dengan menganggap data kosong sebagai data rata-rata, model tetap dapat memperoleh informasi dari data yang ada pada kolom lainnya. Proses yang dilakukan pertama-tama dengan cara mengambil nilai rata-rata dari kolom yang memiliki data kosong, kemudian memasukannya kepada setiap data kosong sebagai pengganti dari datanya. Semua proses tersebut dilakukan dengan slicing data dengan kondisi 
 * Untuk mengatasi data kosong dengan nilai rata-rata kolom (mean substition),maka rata-rata yang memiliki data kosong dengan membuat kolom Potability = 0 dan selanjutnya membuat kolom Potability = 1
@@ -105,11 +105,14 @@ Setelah  melakukan pra-pemrosesan pada dataset. Untuk selanjutnya adalah modelin
 
 * Model baseline adalah model awal yang digunakan sebagai pembanding atau titik awal dalam membangun model yang lebih kompleks atau dioptimalkan.melatih model baseline menggunakan data latih (X_train dan y_train). Metode fit() digunakan untuk mengajarkan model untuk mempelajari pola atau hubungan antara fitur-fitur dalam data latih dan label yang sesuai.
 
-<img width="430" alt="model 1" src="https://github.com/yudhakr/MLT/assets/84507343/05580f53-6a31-4c80-855d-a8505908a7e1">
+|   |                         | Not Potable |           |          |  Potable |           |          |        |
+|---|------------------------:|------------:|----------:|---------:|---------:|-----------|----------|--------|
+|   |         accuracy        |    f1-score | precision |   recall | f1-score | precision | recall   |        |
+|   |      Model Baseline     |     0.69625 |  0.688062 | 0.707124 |     0.67 | 0.704019  | 0.686461 | 0.7225 |
+|   | Model yang Dikembangkan |     0.80000 |  0.787234 | 0.840909 |     0.74 | 0.811321  | 0.767857 | 0.8600 |
+|   |                         |             |           |          |          |           |          |        |
+|   |                         |             |           |          |          |           |          |        |
 
- Untuk menyimpan prediksi confussion matrix 
- 
- <img width="236" alt="model 2" src="https://github.com/yudhakr/MLT/assets/84507343/ed66b314-6235-4bc4-b500-0d748ae25a93">
 
 Pada Model berbandingan dengan algoritma K-Nearest Neighbor,dimana membuktikan apakah kedua model dapat diuji dan divisualisasikan pada confussion matrix.
 * Hasil Model baseline
