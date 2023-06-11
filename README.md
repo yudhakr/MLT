@@ -69,7 +69,7 @@ Untuk informasi mengenai dataset  yang digunakan dalam proyak menggunakan data u
 
 ### Variable-variabel pada Water quality
 
-Pada dataset yang digunakan " Analisis Prediktif Data Air Bersih Di Masyarakat" berisi 3277 baris dan 12 kolom.tipe data yang digunakan adalah float64 dan 1 buah data bertipe int64. Untuk penjelasan menganai variabel - variabel yang ada dalam dataset **_water quality_** sebagai berikut :
+Pada dataset yang digunakan " Analisis Prediktif Data Air Bersih Di Masyarakat" berisi 3276 baris dan 12 kolom.tipe data yang digunakan adalah float64 dan 1 buah data bertipe int64. Untuk penjelasan menganai variabel - variabel yang ada dalam dataset **_water quality_** sebagai berikut :
 
 1. **Nilai pH**: adalah aparameter penting dalam mengevaluasi keseimbangan asam-basa air.merupakan nini indikator apakah air asam/basa dengan menggunakan skala 0 hingga 14.
 2. **Hardness**: adalah parameter yang disebabkan oleh garam kalsium dan magnesium,kekerasan dalam kapasitas air untuk mengendapkan sabun dalam mg/L
@@ -82,9 +82,32 @@ Pada dataset yang digunakan " Analisis Prediktif Data Air Bersih Di Masyarakat" 
 9. **Turbidity**: adalah Kekeruhan yang berasal sifat air dalam memancarkan cahaya, dan uji ini digunakan untuk menunjukkan kualitas pembuangan limbah terkait dengan zat koloid. Nilai kekeruhan rata-rata yang diperoleh untuk Kampus Wondo Genet (0,98 NTU) lebih rendah dari nilai yang direkomendasikan oleh WHO yaitu 5,00 NTU.
 10. **Potability**: adalah air aman untuk dikonsumsi oleh manusia, di mana 1 berarti dapat diminum dan 0 berarti tidak dapat diminum.
 
-Selain itu disini melakukan visualisasi data yang kosng
+
 <img width="850" alt="visualisasi data" src="https://github.com/yudhakr/MLT/assets/84507343/8fbf937d-06ed-497b-b343-8c38dc5bb9e5">
-<img width="734" alt="visualisasi data 2" src="https://github.com/yudhakr/MLT/assets/84507343/52cb286c-9712-4fa1-812d-14d9e6b469a3">
+
+__Gambar 1__ : Perbandingan setiap variable dan seberapa banyak data yang kosong yang dimuat dalam dataset yang berjumlah 3276
+
+
+<img width="419" alt="fitur katagori" src="https://github.com/yudhakr/MLT/assets/84507343/703a6940-e7e8-4241-b12c-50ee373c9e8b">
+
+ __Gambar 2__ : Merupakan visualisasi distribusi kelas pada kolom dengan fitur kategori (Potability) dan menghasilkan potable 39% sedangkan  Not Potable 61%.
+ 
+ ![3](https://github.com/yudhakr/MLT/assets/84507343/54b0ccfb-42b0-4257-8159-e22950aaa4a1)
+ 
+ __Gambar 3__: Merupakan visualisasi antar korelasi dengan menggunakan fitur numerik yang berasal dari korelasi data.
+ 
+ 
+<img width="370" alt="antar kolom" src="https://github.com/yudhakr/MLT/assets/84507343/1a0f24b6-904c-40eb-a55e-e49615435613">
+
+__Gambar 4__: Merupakan histogram korelasi data antar kolom.
+
+<img width="245" alt="heatmap" src="https://github.com/yudhakr/MLT/assets/84507343/8e334877-5e02-4e12-bc28-c17f41327369">
+
+__Gambar 5__: Merupakan gambaran visualisasi heatmap dari korelasi data yang dimana data yang mendekati __1__ maka semakin tinggi korelasi datanya dedangkan mendekati __-1__ akan semakin rendah.
+
+
+
+
 
 
 ## Data Preparation
@@ -116,6 +139,8 @@ Setelah  melakukan pra-pemrosesan pada dataset. Untuk selanjutnya adalah modelin
 Pada Model berbandingan dengan algoritma K-Nearest Neighbor,dimana membuktikan apakah kedua model dapat diuji dan divisualisasikan pada confussion matrix.
 * Hasil Model baseline
 <img width="369" alt="model 5" src="https://github.com/yudhakr/MLT/assets/84507343/1a6c166d-ef1c-4a5e-ba3c-e828ae634b6c">
+
+__Gambar 6__:
 
 
 * Hasil Model yang dikembangkan (model yang dapat digunakan
