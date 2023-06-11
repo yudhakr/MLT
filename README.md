@@ -105,14 +105,13 @@ Setelah  melakukan pra-pemrosesan pada dataset. Untuk selanjutnya adalah modelin
 
 * Model baseline adalah model awal yang digunakan sebagai pembanding atau titik awal dalam membangun model yang lebih kompleks atau dioptimalkan.melatih model baseline menggunakan data latih (X_train dan y_train). Metode fit() digunakan untuk mengajarkan model untuk mempelajari pola atau hubungan antara fitur-fitur dalam data latih dan label yang sesuai.
 
-|   |                         | Not Potable |           |          |  Potable |           |          |        |
-|---|------------------------:|------------:|----------:|---------:|---------:|-----------|----------|--------|
-|   |         accuracy        |    f1-score | precision |   recall | f1-score | precision | recall   |        |
-|   |      Model Baseline     |     0.69625 |  0.688062 | 0.707124 |     0.67 | 0.704019  | 0.686461 | 0.7225 |
-|   | Model yang Dikembangkan |     0.80000 |  0.787234 | 0.840909 |     0.74 | 0.811321  | 0.767857 | 0.8600 |
-|   |                         |             |           |          |          |           |          |        |
-|   |                         |             |           |          |          |           |          |        |
-
+|   |                         | Not Potable |          |           |        |  Potable |           |        |
+|---|------------------------:|------------:|---------:|----------:|-------:|---------:|-----------|--------|
+|   |                         |   accuracy  | f1-score | precision | recall | f1-score | precision | recall |
+|   |      Model Baseline     |     0.69625 | 0.688062 |  0.707124 |   0.67 | 0.704019 | 0.686461  | 0.7225 |
+|   | Model yang Dikembangkan |     0.80000 | 0.787234 |  0.840909 |   0.74 | 0.811321 | 0.767857  | 0.8600 |
+|   |                         |             |          |           |        |          |           |        |
+|   |                         |             |          |           |        |          |           |        |
 
 Pada Model berbandingan dengan algoritma K-Nearest Neighbor,dimana membuktikan apakah kedua model dapat diuji dan divisualisasikan pada confussion matrix.
 * Hasil Model baseline
