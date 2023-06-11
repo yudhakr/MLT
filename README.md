@@ -135,7 +135,9 @@ Pada proyek ini, model yang dikembangkan adalah Dalam proyek ini, sistem yang di
 |   | weighted avg |  0.696792 | 0.69625 | 0.696041 | 800.00000 |
 
 * Rumus Akurasi
-<img width="251" alt="akurasi 1" src="https://github.com/yudhakr/MLT/assets/84507343/9c4abd6f-704e-475d-b343-f647934bb0a8">
+
+$$Akurasi = (TP + TN ) / (TP+FP+FN+TN) $$
+
 
 Rumus diatas merupakan metrik akurasi yang menghitung ketepatan model dalam hal ini meprediksi data dengan data yang sebenarnya.Untuk kelebihan sendiri dalam pembuatan model klasifikasi baik itu klasifikasi antar dua kelas maupun kategori, selain itu perthitungan ini memiliki kekurangan yang biasanya dapat menyesatkan terutama data yang tidak seimbang.
 
