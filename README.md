@@ -145,6 +145,7 @@ __Gambar 6__: Pada gambar visual mengenai model basline dan menghasilkan confuss
 
 * Hasil Model yang dikembangkan (model yang dapat digunakan
 <img width="338" alt="model 6" src="https://github.com/yudhakr/MLT/assets/84507343/79d43bee-883a-48a6-9c2a-f21d99e080ee">
+
 __Gambar 7__: Gambar diatas menerangkan model confussion matrix yang dikembangkan menghasilkan kinerja yang lebih baik dalam memprediksi kualitas air yang dapat diminum, dengan akurasi, f1-score, presisi, dan recall yang lebih tinggi
 
 
