@@ -36,7 +36,7 @@ Solusi yang dapat dilakukan untu memenuhi tujuan diantaranya :
 
   Poin pra-pemrosesan data akan dibahas lebih lanjut pada bagian `Data Preparation`
  
-* Untuk pembuatan model menggunakan model __K-Nearest Neighbor__ sebagai model baseline.Algoritma tersebut dipilih karena mudah digunakan dan juga cocok untuk kasus ini.Algoritma ini mngasumsikan bahwa sesuatu yang serupa serta selalu berdekatan Berikut cara kerja algoritmanya,[5]
+* Untuk pembuatan model menggunakan model **K-Nearest Neighbor** sebagai model baseline.Algoritma tersebut dipilih karena mudah digunakan dan juga cocok untuk kasus ini.Algoritma ini mngasumsikan bahwa sesuatu yang serupa serta selalu berdekatan Berikut cara kerja algoritmanya,[5]
 - Melakukan pemuatan data
 - Menginisialisasikan nilai K(banyak tetangga/kelompok)
 - Melakukan penambahkan jarak dan urutan dari contoh pada koleksi yang berururutan (hitungan euclidin distance) dengan rumus
@@ -153,7 +153,7 @@ Pada proyek ini teknik data preparation yang dilakukan diantaranya :
 
 Setelah  melakukan pra-pemrosesan pada dataset. Untuk selanjutnya adalah modeling terhadap data. Pada tahap ini menggunakan 2 algoritma K-Nearest dengan  menggunakan data model terlatih sehingga data diukur bilai akurasinya.
 
-* Model baseline adalah  model dasar dengan menggunakan modul scikit-learn yakni -__KNeighborsClassifier__ tanpa menggunakan parameter tambahan. Lalu melakukan prediksi kepada data ujinya.
+* Model baseline adalah  model dasar dengan menggunakan modul scikit-learn yakni __KNeighborsClassifier__ tanpa menggunakan parameter tambahan. Lalu melakukan prediksi kepada data ujinya.
 
 |   |                         | Not Potable |          |           |        |  Potable |           |        |
 |---|------------------------:|------------:|---------:|----------:|-------:|---------:|-----------|--------|
