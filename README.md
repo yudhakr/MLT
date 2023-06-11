@@ -11,7 +11,7 @@ Air yang terkontaminasi oleh polusi, seperti logam berat, pestisida, bakteri, da
    Berdasarkan terori masalah kualitas air yang umum terjadi termasuk kontaminasi feses, penyakit yang disebabkan oleh air yang tidak aman, dan tantangan akibat perubahan iklim dan faktor lainya yang menurunnya kualitas air
 terutama untuk dikomsumsi.Kualitas fisikokimia, bakteriologis, dan konsentrasi logam jejak sampel air dari sumber yang diolah, keran jalan, dan wadah penyimpanan rumah tangga sebagian besar berada dalam kisaran yang diizinkan standar air minum WHO dan SANS.
 
-Maka dari permasalahan tersebut penulis ingin membuat sistem model nalisis Prediktif Data Air Bersih Di Masyarakat berdasarkan variabel-variabel tertentu,sehingga masyarakat akan tahu dan berhati-hati dalam penggunaan air dan tahu cara menglola air yang terkontaminasi material tertentu.Juga diharapkan model machine learning ini diharapkan dapat memudahkan ahli seperti ahli hidrologi dan para pencari sumber air dalam mencari air dan mengujinya secara cepat sebelum menunggu hasil dari laboratorium. Implementasinya model ini dapat dijalankan dan diterapkan pada sebuah aplikasi [[1]](https://www.mendeley.com/search/?page=1&query=%20K-Nearest%20Neighbor%20air%20bersih&sortBy=relevance).
+Maka dari permasalahan tersebut penulis ingin membuat sistem model nalisis Prediktif Data Air Bersih Di Masyarakat berdasarkan variabel-variabel tertentu,sehingga masyarakat akan tahu dan berhati-hati dalam penggunaan air dan tahu cara menglola air yang terkontaminasi material tertentu.Juga diharapkan model machine learning ini diharapkan dapat memudahkan ahli seperti ahli hidrologi dan para pencari sumber air dalam mencari air dan mengujinya secara cepat sebelum menunggu hasil dari laboratorium. Implementasinya model ini dapat dijalankan dan diterapkan pada sebuah aplikasi. [[1]](https://www.mendeley.com/search/?page=1&query=%20K-Nearest%20Neighbor%20air%20bersih&sortBy=relevance)
 
 
 ## Business Understanding
@@ -34,7 +34,7 @@ Solusi yang dapat dilakukan untu memenuhi tujuan diantaranya :
   - Melakukan penghapusan data pencilan pada data latih dengan metode LOF **_(Local Outlier Factor)_**.
   - Melakukan standardisasi data pada semua fitur data **_(Standar Scaler)_**.
 * 
-* Untuk pembuatan model menggunakan model K-Nearest Neighbor sebagai model baseline.Algoritma tersebut dipilih karena mudah digunakan dan juga cocok untuk kasus ini.Algoritma ini mngasumsikan bahwa sesuatu yang serupa serta selalu berdekatan Berikut cara kerja algoritmanya, 
+* Untuk pembuatan model menggunakan model K-Nearest Neighbor sebagai model baseline.Algoritma tersebut dipilih karena mudah digunakan dan juga cocok untuk kasus ini.Algoritma ini mngasumsikan bahwa sesuatu yang serupa serta selalu berdekatan Berikut cara kerja algoritmanya,[5]
 - Melakukan pemuatan data
 - Menginisialisasikan nilai K(banyak tetangga/kelompok)
 - Melakukan penambahkan jarak dan urutan dari contoh pada koleksi yang berururutan (hitungan euclidin distance) dengan rumus
@@ -52,7 +52,7 @@ kelebihan dan kekurangan algoritma Random Forest dan K-Nearest Neighbor:
         * Tentukan kelompok testing berdasarkan label pada K.
     * Kelebihan dan kekurangan Algoritma K-Nearest Neighbor 
         * KNN memiliki beberapa kelebihan yaitu bahwa algoritmanya tangguh terhadap _training_ data yang _noisy_ dan efektif apabila data latihnya besar.
-        * Kekurangan pada algoritma KKN yaitu perlu menentukan nilai dari parameter K (jumlah dari tetangga terdekat), Pembelajaran berdasarkan jarak tidak jelas mengenai jenis jarak apa yang harus digunakan dan atribut mana yang harus digunakan untuk mendapatkan hasil yang terbaik dan Biaya komputasi cukup tinggi karena diperlukan perhitungan dari jarak tiap sample uji pada keseluruhan sample latih[[2]](https://publikasi.dinus.ac.id/index.php/jais/article/view/1189/).
+        * Kekurangan pada algoritma KKN yaitu perlu menentukan nilai dari parameter K (jumlah dari tetangga terdekat), Pembelajaran berdasarkan jarak tidak jelas mengenai jenis jarak apa yang harus digunakan dan atribut mana yang harus digunakan untuk mendapatkan hasil yang terbaik dan Biaya komputasi cukup tinggi karena diperlukan perhitungan dari jarak tiap sample uji pada keseluruhan sample latih.  [[2]](https://publikasi.dinus.ac.id/index.php/jais/article/view/1189/)
 
 ## Data Understanding
 <img width="875" alt="dataset" src="https://github.com/yudhakr/MLT/assets/84507343/a07fef2d-96a7-4384-944a-c4a4b19281f9">
@@ -103,7 +103,7 @@ __Gambar 4__: Merupakan histogram korelasi data antar kolom.
 
 <img width="245" alt="heatmap" src="https://github.com/yudhakr/MLT/assets/84507343/8e334877-5e02-4e12-bc28-c17f41327369">
 
-__Gambar 5__: Merupakan Matrik korelasi yang menunjukan korelasi antar variabel penggunaan matriks korelasi untuk meringkas kumpulan data yang besar dan untuk mengidentifikasi pola dan membuat keputusan yang sesuai dengannya.Setiap sel dalam matriks berisi koefisien korelasi.
+__Gambar 5__: Merupakan Matrik korelasi yang menunjukan korelasi antar variabel penggunaan matriks korelasi untuk meringkas kumpulan data yang besar dan untuk mengidentifikasi pola dan membuat keputusan yang sesuai dengannya.Setiap sel dalam matriks berisi koefisien korelasi.[4]
 
 
 
@@ -140,12 +140,12 @@ Pada Model berbandingan dengan algoritma K-Nearest Neighbor,dimana membuktikan a
 * Hasil Model baseline
 <img width="369" alt="model 5" src="https://github.com/yudhakr/MLT/assets/84507343/1a6c166d-ef1c-4a5e-ba3c-e828ae634b6c">
 
-__Gambar 6__:
+__Gambar 6__: Pada gambar visual mengenai model basline dan menghasilkan confussion matrix cukup rendah
 
 
 * Hasil Model yang dikembangkan (model yang dapat digunakan
 <img width="338" alt="model 6" src="https://github.com/yudhakr/MLT/assets/84507343/79d43bee-883a-48a6-9c2a-f21d99e080ee">
-
+__Gambar 7__: Gambar diatas menerangkan model confussion matrix yang dikembangkan menghasilkan kinerja yang lebih baik dalam memprediksi kualitas air yang dapat diminum, dengan akurasi, f1-score, presisi, dan recall yang lebih tinggi
 
 
 ## Evalution
@@ -182,7 +182,8 @@ Kelebihan dari metriks ini menutup semua kekurangan yang ada pada precision dan 
 - [[1]](http://publikasi.dinus.ac.id/index.php/technoc/article/view/5901)Hardiana Said, Nur Hafifah Matondang, Helena Nurramdhani Irmanda,Penerapan Algoritma K-Nearest Neighbors Untuk Memprediksi Kualitas Air Yang Dapat Dikonsumsi,publikasi dinus,Vol 21, No. 2,2020.[accesed Jun 10 2023]
 - [[2]](https://publikasi.dinus.ac.id/index.php/jais/article/view/1189/)Ramadhan Rakhmat Sani, Junta Zeniarja, Ardytha Luthfiarta,Penerapan Algoritma K-Nearest Neighbor pada Information Retrieval dalam Penentuan Topik Referensi Tugas Akhir,publikasi dinus,Vol 1,No. 2,2016.[accesed Jun 10 2023]
 - [[3]](https://www.kaggle.com/datasets/adityakadiwal/water-potability) Aitya Kadiwak."Water Quality Drinking water potability".Kaggle.https://www.kaggle.com/datasets/adityakadiwal/water-potability.  [accessed Jun.10 2023]
-- [5]
+- [[4]](https://builtin.com/data-science/correlation-matrix) Sanskar Wagavkar."Introduction to the Correlation Matrix."https://builtin.com/data-science/correlation-matrix [accessed Jun.10 2023]
+- [[5]](https://towardsdatascience.com/machine-learning-basics-with-the-k-nearest-neighbors-algorithm-6a6e71d01761) Harrison, O. (2019, July 14). Machine Learning Basics with the K-Nearest Neighbors Algorithm. Medium. https://towardsdatascience.com/machine-learning-basics-with-the-k-nearest-neighbors-algorithm-6a6e71d01761 [accessed Jun.10 2023]
 
 
 
