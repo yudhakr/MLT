@@ -190,12 +190,10 @@ Pada proyek ini, model yang dikembangkan adalah Dalam proyek ini, sistem yang di
 |   |   macro avg  |  0.696792 | 0.69625 | 0.696041 | 800.00000 |
 |   | weighted avg |  0.696792 | 0.69625 | 0.696041 | 800.00000 |
 
-* Rumus Akurasi
+* _Akurasi_ merupakan ukuran yang bagus tetapi hanya jika  memiliki kumpulan data simetris.Metrik akurasi yang menghitung ketepatan model dalam hal ini meprediksi data dengan data yang sebenarnya.Untuk kelebihan sendiri dalam pembuatan model klasifikasi baik itu klasifikasi antar dua kelas maupun kategori, selain itu perthitungan ini memiliki kekurangan yang biasanya dapat menyesatkan terutama data yang tidak seimbang.[7]
 
 $$Akurasi = (TP + TN ) / (TP+FP+FN+TN) $$
 
-
-Rumus diatas merupakan metrik akurasi yang menghitung ketepatan model dalam hal ini meprediksi data dengan data yang sebenarnya.Untuk kelebihan sendiri dalam pembuatan model klasifikasi baik itu klasifikasi antar dua kelas maupun kategori, selain itu perthitungan ini memiliki kekurangan yang biasanya dapat menyesatkan terutama data yang tidak seimbang.[7]
 
 * _Precision_ merupakan numerik untuk melakukan prediksi benar positifnya hasil suatu prediksi. Kelebihan dari metriks ini berfokus pada bagaimana performa (prediksi) model terhadap label data positif, kekurangannya metriks ini tidak memperhitungkan label negatifnya,untuk rumus sendiri.[7]
 
