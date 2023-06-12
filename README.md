@@ -199,7 +199,7 @@ $$Akurasi = (TP + TN ) / (TP+FP+FN+TN) $$
 
 $$Precision = (TP)/(TP + TP) $$
 
- *_Recall_ merupakan metrik untuk memprediksi benar positifnya berdasarkan keseluruhan data. Recall merupakan metrik dalam kasus klasifikasi yang digunakan untuk menghitung seberapa baik model memprediksi label positif terhadap semua label data positif, untuk rumus sendiri.[7]
+ * _Recall_ merupakan metrik untuk memprediksi benar positifnya berdasarkan keseluruhan data. Recall merupakan metrik dalam kasus klasifikasi yang digunakan untuk menghitung seberapa baik model memprediksi label positif terhadap semua label data positif, untuk rumus sendiri.[7]
  
 $$Recall_ = (TP)/(TP + FN) $$
  
