@@ -53,7 +53,7 @@ Selain itu, berikut ini merupakan kelebihan dan kekurangan algoritma dari K-Near
 Kekurangan :
 - Algoritme menjadi lebih lambat secara signifikan karena jumlah contoh dan/atau prediktor/variabel yang meningkat.[[2]](https://publikasi.dinus.ac.id/index.php/jais/article/view/1189/)
 
-* Kemudian __model baseline tersebut dikembangkan__ dengan pengaturan hyperparameter otomatis dengan __HalvingGridSearchCV__. HalvingGridSearchCV merupakan metode pencarian parameter yang optimal dengan Successive Halving. Cara kerja algorimat ini adalah sebagai berikut
+* Kemudian __model baseline tersebut dikembangkan__ dengan pengaturan hyperparameter otomatis dengan __HalvingGridSearchCV__. HalvingGridSearchCV merupakan metode pencarian parameter yang optimal dengan __Successive Halving__. Cara kerja algorimat ini adalah sebagai berikut
 - Sampel secara acak satu set konfigurasi hyperparameter
 - Evaluasi performa semua konfigurasi yang tersisa saat ini
 - Abaikan bagian bawah dari konfigurasi dengan skor terburuk
@@ -151,9 +151,9 @@ Pada proyek ini teknik data preparation yang dilakukan diantaranya :
 
 ## Modeling
 
-Setelah  melakukan pra-pemrosesan pada dataset. Untuk selanjutnya adalah modeling terhadap data. Pada tahap ini menggunakan 2 algoritma K-Nearest dengan  menggunakan data model terlatih sehingga data diukur bilai akurasinya.
+Setelah  melakukan pra-pemrosesan pada dataset. Untuk selanjutnya adalah modeling terhadap data. Pada tahap ini menggunakan 2 algoritma K-Nearest dengan tahap pembuatan model baseline dan pembuatan model yang dikembangkan.
 
-* Model baseline adalah  model dasar dengan menggunakan modul scikit-learn yakni __KNeighborsClassifier__ tanpa menggunakan parameter tambahan. Lalu melakukan prediksi kepada data ujinya.
+* Model baseline adalah  model dasar dengan menggunakan modul scikit-learn yakni __KNeighborsClassifier__ tanpa menggunakan parameter tambahan. Lalu melakukan prediksi kepada data yang di uji.
 
 |   |                         | Not Potable |          |           |        |  Potable |           |        |
 |---|------------------------:|------------:|---------:|----------:|-------:|---------:|-----------|--------|
@@ -178,7 +178,8 @@ __Gambar 6__: Gambar diatas menerangkan model confussion matrix yang dikembangka
 
 
 ## Evalution
-Pada proyek ini, model yang dikembangkan adalah Dalam proyek ini, sistem yang dikembangkan adalah suatu jenis klasifikasi dan mengukur performanya menggunakan metrik akurasi, f1-skor, recall, dan presisi. Berikut adalah hasil pengukuran dari model yang dipilih, yakni model yang menggunakan algoritma Pohon Acak (Random Forest), dengan metrik akurasi, f1-skor, recall, dan precision.
+Pada proyek ini, model yang dikembangkan adalah Dalam proyek ini, sistem yang dikembangkan adalah suatu jenis klasifikasi dan mengukur performanya menggunakan metrik akurasi, f1-skor, recall, dan presisi. Berikut adalah hasil pengukuran model yang dikembangkan dengan metriks akurasi, f1-score, recall dan precision.
+
 * Laporan hasil klasifikasi model_baseline
 
 |   |              | precision |  recall | f1-score |   support |
