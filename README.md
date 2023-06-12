@@ -212,14 +212,14 @@ Kelebihan dari metriks ini menutup semua kekurangan yang ada pada precision dan 
  
 
 ## Referensi
-- [[1]](http://publikasi.dinus.ac.id/index.php/technoc/article/view/5901)Hardiana Said, Nur Hafifah Matondang, Helena Nurramdhani Irmanda,Penerapan Algoritma K-Nearest Neighbors Untuk Memprediksi Kualitas Air Yang Dapat Dikonsumsi,publikasi dinus,Vol 21, No. 2,2020.[accesed Jun 10 2023]
-- [[2]](https://publikasi.dinus.ac.id/index.php/jais/article/view/1189/)Ramadhan Rakhmat Sani, Junta Zeniarja, Ardytha Luthfiarta,Penerapan Algoritma K-Nearest Neighbor pada Information Retrieval dalam Penentuan Topik Referensi Tugas Akhir,publikasi dinus,Vol 1,No. 2,2016.[accesed Jun 10 2023]
+- [[1]](http://publikasi.dinus.ac.id/index.php/technoc/article/view/5901) Hardiana Said, Nur Hafifah Matondang, Helena Nurramdhani Irmanda,Penerapan Algoritma K-Nearest Neighbors Untuk Memprediksi Kualitas Air Yang Dapat Dikonsumsi,publikasi dinus,Vol 21, No. 2,2020.[accesed Jun 10 2023]
+- [[2]](https://publikasi.dinus.ac.id/index.php/jais/article/view/1189/) Ramadhan Rakhmat Sani, Junta Zeniarja, Ardytha Luthfiarta,Penerapan Algoritma K-Nearest Neighbor pada Information Retrieval dalam Penentuan Topik Referensi Tugas Akhir,publikasi dinus,Vol 1,No. 2,2016.[accesed Jun 10 2023]
 - [[3]](https://www.kaggle.com/datasets/adityakadiwal/water-potability) Aitya Kadiwak."Water Quality Drinking water potability".Kaggle.https://www.kaggle.com/datasets/adityakadiwal/water-potability.  [accessed Jun.10 2023]
 - [[4]](https://builtin.com/data-science/correlation-matrix) Sanskar Wagavkar."Introduction to the Correlation Matrix."https://builtin.com/data-science/correlation-matrix [accessed Jun.10 2023]
 - [[5]](https://towardsdatascience.com/machine-learning-basics-with-the-k-nearest-neighbors-algorithm-6a6e71d01761) Harrison, O. (2019, July 14)."Machine Learning Basics with the K-Nearest Neighbors Algorithm". Medium. https://towardsdatascience.com/machine-learning-basics-with-the-k-nearest-neighbors-algorithm-6a6e71d01761 [accessed Jun.10 2023]
 - [[6]](https://statisticsbyjim.com/basics/remove-outliers/) Frost, J."Guidelines for Removing dan Handling Outliers in Data". Statistics By Jim. https://statisticsbyjim.com/basics/remove-outliers/ [accessed Jun.10 2023]
 - [[7]](https://rey1024.medium.com/mengenal-accuracy-precission-recall-dan-specificity-serta-yang-diprioritaskan-b79ff4d77de8) Salma Ghoneim."Accuracy, Recall, Precision, F-Score & Specificity." https://towardsdatascience.com/accuracy-recall-precision-f-score-specificity-which-to-optimize-on-867d3f11124 [accessed Jun.11 2023]
-- [[8]](https://bobrupakroy.medium.com/halving-gridsearch-736b13898327)Bob Rupak Roy."Halving GridSearch." https://bobrupakroy.medium.com/halving-gridsearch-736b13898327 [accessed Jun.12 2023] 
+- [[8]](https://bobrupakroy.medium.com/halving-gridsearch-736b13898327) Bob Rupak Roy."Halving GridSearch." https://bobrupakroy.medium.com/halving-gridsearch-736b13898327 [accessed Jun.12 2023] 
 
 
 
