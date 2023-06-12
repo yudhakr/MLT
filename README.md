@@ -169,7 +169,7 @@ Pada Model berbandingan dengan algoritma K-Nearest Neighbor,dimana membuktikan a
 
 __Gambar 5__: Pada gambar visual mengenai model basline dan menghasilkan confussion matrix cukup rendah
 
-* Kemudian setelah melihat kinerja model baseline, agar dapat bekerja lebih optimal lagi maka digunakan sebuah fungsi untuk mencari hyperparameter yang optimal dengan __HalvingGridSearchCV__ dan didapat
+* Kemudian setelah melihat kinerja model baseline, agar dapat bekerja lebih optimal lagi maka digunakan sebuah fungsi untuk mencari hyperparameter yang optimal/skor yang terbaik dengan __HalvingGridSearchCV__ dan didapat
 
 `Paremater Terbaik KNeighborsClassifier(algorithm='ball_tree', leaf_size=18, n_neighbors=1) dengan skor 0.7425159852741717`
 
