@@ -215,7 +215,7 @@ $$F1 Score = 2* (Recall*Precission) / (Recall + Precission) $$
 Kelebihan dari metriks ini menutup semua kekurangan yang ada pada precision dan recall. Namun kekurangannya adalah f1-score tidak memperhitungkan hasil prediksi benar pada label negatif.[7]
  
 
-## Referensi
+## Daftar Pustaka
 - [[1]](http://publikasi.dinus.ac.id/index.php/technoc/article/view/5901) Hardiana Said, Nur Hafifah Matondang, Helena Nurramdhani Irmanda,Penerapan Algoritma K-Nearest Neighbors Untuk Memprediksi Kualitas Air Yang Dapat Dikonsumsi,publikasi dinus,Vol 21, No. 2,2020.[accesed Jun 10 2023]
 - [[2]](https://publikasi.dinus.ac.id/index.php/jais/article/view/1189/) Ramadhan Rakhmat Sani, Junta Zeniarja, Ardytha Luthfiarta,Penerapan Algoritma K-Nearest Neighbor pada Information Retrieval dalam Penentuan Topik Referensi Tugas Akhir,publikasi dinus,Vol 1,No. 2,2016.[accesed Jun 10 2023]
 - [[3]](https://www.kaggle.com/datasets/adityakadiwal/water-potability) Aitya Kadiwak."Water Quality Drinking water potability".Kaggle.https://www.kaggle.com/datasets/adityakadiwal/water-potability.  [accessed Jun.10 2023]
