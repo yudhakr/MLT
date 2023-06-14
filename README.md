@@ -37,9 +37,9 @@ Solusi yang dapat dilakukan untu memenuhi tujuan diantaranya :
   Poin pra-pemrosesan data akan dibahas lebih lanjut pada bagian `Data Preparation`
  
 * Untuk pembuatan model menggunakan model **K-Nearest Neighbor** sebagai model baseline.Algoritma tersebut dipilih karena mudah digunakan dan juga cocok untuk kasus ini.Algoritma ini mngasumsikan bahwa sesuatu yang serupa serta selalu berdekatan Berikut cara kerja algoritmanya,[5]
-- Melakukan pemuatan data
-- Menginisialisasikan nilai K(banyak tetangga/kelompok)
-- Melakukan penambahkan jarak dan urutan dari contoh pada koleksi yang berururutan (hitungan euclidin distance) dengan rumus
+- Melakukan pemuatan data.
+- Menginisialisasikan nilai K(banyak tetangga/kelompok).
+- Melakukan penambahkan jarak dan urutan dari contoh pada koleksi yang berururutan (hitungan euclidin distance) dengan rumus.
 
 $$d(xi, x1) = √(x₁ − xu)² + (xi2 − X12)² + ... + (Tip − Xlp) $$
 
