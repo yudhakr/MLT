@@ -4,7 +4,7 @@ Judul proyek : "Analisis Prediktif Data Air Bersih Di Masyarakat".
 
 ## Domain Proyek
 [![Analisis-Prediktif-Data-Air-Bersih-Di-Masyarakat.jpg](https://i.postimg.cc/pTbscM81/Analisis-Prediktif-Data-Air-Bersih-Di-Masyarakat.jpg)](https://postimg.cc/DW6QmDxq)
-   Kualitas air yang baik adalah faktor penting bagi kesehatan manusia.
+   Kualitas air yang bersih adalah faktor penting bagi kesehatan manusia.
 Manusia sangat bergantung pada air yang aman dan bersih untuk memenuhi kebutuhan sehari-hari, seperti minum, memasak, dan menjaga kebersihan pribadi.
 Air yang terkontaminasi oleh polusi, seperti logam berat, pestisida, bakteri, dan virus, dapat menyebabkan berbagai masalah kesehatan yang serius, termasuk penyakit perut, masalah pernapasan, keracunan, dan gangguan sistem kekebalan tubuh. 
 
