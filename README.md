@@ -8,7 +8,7 @@ Judul proyek : "Analisis Prediktif Data Air Bersih Di Masyarakat".
 Manusia sangat bergantung pada air yang aman dan bersih untuk memenuhi kebutuhan sehari-hari, seperti minum, memasak, dan menjaga kebersihan pribadi.
 Air yang terkontaminasi oleh polusi, seperti logam berat, pestisida, bakteri, dan virus, dapat menyebabkan berbagai masalah kesehatan yang serius, termasuk penyakit perut, masalah pernapasan, keracunan, dan gangguan sistem kekebalan tubuh. 
 
-   Berdasarkan masalah kualitas air yang umum terjadi termasuk kontaminasi feses, penyakit yang disebabkan oleh air yang tidak aman, dan tantangan akibat perubahan iklim dan faktor lainya yang menurunnya kualitas air
+   Berdasarkan  teori masalah kualitas air yang umum terjadi termasuk kontaminasi feses, penyakit yang disebabkan oleh air yang tidak aman, dan tantangan akibat perubahan iklim dan faktor lainya yang menurunnya kualitas air
 terutama untuk dikomsumsi.Kualitas fisikokimia, bakteriologis, dan konsentrasi logam jejak sampel air dari sumber yang diolah, keran jalan, dan wadah penyimpanan rumah tangga sebagian besar berada dalam kisaran yang diizinkan standar air minum WHO dan SANS.
 
 Maka dari permasalahan tersebut penulis ingin membuat sistem model nalisis Prediktif Data Air Bersih Di Masyarakat berdasarkan variabel-variabel tertentu,sehingga masyarakat akan tahu dan berhati-hati dalam penggunaan air dan tahu cara menglola air yang terkontaminasi material tertentu.Juga diharapkan model machine learning ini diharapkan dapat memudahkan ahli seperti ahli hidrologi dan para pencari sumber air dalam mencari air dan mengujinya secara cepat sebelum menunggu hasil dari laboratorium. Implementasinya model ini dapat dijalankan dan diterapkan pada sebuah aplikasi. [[1]](https://www.mendeley.com/search/?page=1&query=%20K-Nearest%20Neighbor%20air%20bersih&sortBy=relevance)
@@ -155,15 +155,7 @@ Setelah  melakukan pra-pemrosesan pada dataset. Untuk selanjutnya adalah modelin
 
 * Model baseline adalah  model dasar dengan menggunakan modul scikit-learn yakni __KNeighborsClassifier__ tanpa menggunakan parameter tambahan. Lalu melakukan prediksi kepada data yang di uji.
 
-|   |                         | Not Potable |          |           |        |  Potable |           |        |
-|---|------------------------:|------------:|---------:|----------:|-------:|---------:|-----------|--------|
-|   |                         |   accuracy  | f1-score | precision | recall | f1-score | precision | recall |
-|   |      Model Baseline     |     0.69625 | 0.688062 |  0.707124 |   0.67 | 0.704019 | 0.686461  | 0.7225 |
-|   | Model yang Dikembangkan |     0.80000 | 0.787234 |  0.840909 |   0.74 | 0.811321 | 0.767857  | 0.8600 |
-|   |                         |             |          |           |        |          |           |        |
-|   |                         |             |          |           |        |          |           |        |
-
-Pada Model berbandingan dengan algoritma K-Nearest Neighbor,dimana membuktikan apakah kedua model dapat diuji dan divisualisasikan pada confussion matrix.
+* Sedangkan pada Model berbandingan dengan algoritma K-Nearest Neighbor,dimana membuktikan apakah kedua model dapat diuji dan divisualisasikan pada confussion matrix.
 * Hasil Model baseline
 <img width="369" alt="model 5" src="https://github.com/yudhakr/MLT/assets/84507343/1a6c166d-ef1c-4a5e-ba3c-e828ae634b6c">
 
@@ -182,6 +174,17 @@ __Gambar 6__: Gambar diatas menerapkan model confussion matrix yang dikembangkan
 
 
 ## Evalution
+
+ * Perbandingan Model baseline dan Model yang dikembangkan
+   
+|   |                         | Not Potable |          |           |        |  Potable |           |        |
+|---|------------------------:|------------:|---------:|----------:|-------:|---------:|-----------|--------|
+|   |                         |   accuracy  | f1-score | precision | recall | f1-score | precision | recall |
+|   |      Model Baseline     |     0.69625 | 0.688062 |  0.707124 |   0.67 | 0.704019 | 0.686461  | 0.7225 |
+|   | Model yang Dikembangkan |     0.80000 | 0.787234 |  0.840909 |   0.74 | 0.811321 | 0.767857  | 0.8600 |
+|   |                         |             |          |           |        |          |           |        |
+|   |                         |             |          |           |        |          |           |        |
+
 Pada proyek ini, model yang dikembangkan adalah Dalam proyek ini, sistem yang dikembangkan adalah suatu jenis klasifikasi dan mengukur performanya menggunakan metrik akurasi, f1-skor, recall, dan presisi. Berikut adalah hasil pengukuran model yang dikembangkan dengan metriks akurasi, f1-score, recall dan precision.
 
 * Laporan hasil klasifikasi model_baseline
@@ -194,7 +197,9 @@ Pada proyek ini, model yang dikembangkan adalah Dalam proyek ini, sistem yang di
 |   |   macro avg  |  0.696792 | 0.69625 | 0.696041 | 800.00000 |
 |   | weighted avg |  0.696792 | 0.69625 | 0.696041 | 800.00000 |
 
-* _Akurasi_ merupakan ukuran yang bagus tetapi hanya jika  memiliki kumpulan data simetris.Metrik akurasi yang menghitung ketepatan model dalam hal ini meprediksi data dengan data yang sebenarnya.Untuk kelebihan sendiri dalam pembuatan model klasifikasi baik itu klasifikasi antar dua kelas maupun kategori, selain itu perthitungan ini memiliki kekurangan yang biasanya dapat menyesatkan terutama data yang tidak seimbang.[7]
+ 
+
+* _Akurasi_ merupakan ukuran yang bagus tetapi hanya jika  memiliki kumpulan data simetris.Metrik akurasi yang menghitung ketepatan model dalam hal ini meprediksi data dengan data yang sebenarnya.Untuk kelebihan sendiri dalam pembuatan model klasifikasi baik itu klasifikasi antar dua kelas maupun kategori, selain itu perhitungan ini memiliki kekurangan yang biasanya dapat menyesatkan terutama data yang tidak seimbang.[7]
 
 $$Akurasi = (TP + TN ) / (TP+FP+FN+TN) $$
 
