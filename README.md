@@ -59,7 +59,7 @@ Kekurangan :
 - Abaikan bagian bawah dari konfigurasi dengan skor terburuk
 - Kembali ke tahap ke-2 hingga hanya tersisa satu set konfigurasi
 
-Kelebihan dari pengaturan hyperparameter ini membuat mengevaluasi penggunaan set konfigurasi dengan resource yang sedikit pada iterasi pertama, sedangkan pada iterasi selanjutnya resource mulai ditambah. Hal ini pun menjadi kekurangannya karena set konfigurasi yang dievaluasi dengan resource yang sedikit belum tentu akan memiliki hasil evaluasi yang buruk dengan resource yang banyak.[8]
+Kelebihan dari pengaturan hyperparameter ini membuat mengevaluasi penggunaan set konfigurasi dengan resource yang sedikit pada iterasi pertama, sedangkan pada iterasi selanjutnya resource mulai ditambah. Hal ini pun menjadi kekurangannya karena set konfigurasi yang dievaluasi dengan resource yang sedikit belum tentu akan memiliki hasil evaluasi yang buruk dengan resource yang banyak.
 
 
 
