@@ -218,6 +218,10 @@ $$F1 Score = 2* (Recall*Precission) / (Recall + Precission) $$
 ***_Catatan : Nilai beta = 1 (f1-skor)_***
 
 Kelebihan dari metriks ini menutup semua kekurangan yang ada pada precision dan recall. Namun kekurangannya adalah f1-score tidak memperhitungkan hasil prediksi benar pada label negatif.[7]
+
+### Kesimpulan
+Dari Analisis dan perhitungan maka, pada model basline menghasilkan nilai akurasi yang cukup buruk. Begitupun nilai f1-score, recall dan precision pada setiap labelnya. Namun setelah dilakukan pengaturan hyperparameter, nilai akurasi pun meningkat. Sedangkan perhitungan menggunakan model yang dikembangkan sangat baik terutama dari perhitungan  nilai f1-score, recall dan precision pada setiap labelnya.Sehingga model yang dikembangkan merupakan model yang dipilih dan bagus digunakan ketimbang model baseline.
+
  
 
 ## Daftar Pustaka
